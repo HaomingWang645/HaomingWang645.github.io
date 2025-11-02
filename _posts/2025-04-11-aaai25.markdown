@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "[AAAI25]  Tackling Intertwined Data and Device Heterogeneities in Federated Learning with Unlimited Staleness"
+date:   2025-04-11 22:21:59 +00:00
+image: /paper_images/AAAI_FL.png
+categories: research_pub
+author: "Haoming Wang"
+venue: "in Proceedings of the 39th Annual Conference on Artificial Intelligence <strong>(Acceptance Ratio: 23.4%)</strong>"
+authors: "<strong>Haoming Wang</strong>, Wei Gao"
+subtitle: "aaai_fl"
+paper: /pdfs/aaai25_paper.pdf
+arxiv: https://arxiv.org/abs/2309.13536
+poster: /pdfs/aaai25_poster.pdf
+slides: /pdfs/aaai25_slides.pdf
+
+---
+
+Federated Learning (FL) is challenged by intertwined data and device heterogeneities—differences in clients’ local data distributions and model update staleness. Traditional FL methods treat these separately, which is unrealistic and often ineffective. We propose a novel FL framework that converts stale model updates into unstale ones, addressing these intertwined heterogeneities efficiently. Our method estimates clients’ local data distributions from their stale updates to compute unstale updates, without requiring auxiliary datasets, fully trained local models, or extra client-side computation or communication.
+
