@@ -12,5 +12,5 @@ paper: /pdfs/freezeasguard.pdf
 
 ---
 
-Text-to-image diffusion models can be fine-tuned for personalized domains, but this adaptability also enables misuse, such as forging public figures, replicating copyrighted artworks, or producing explicit content. Existing detection or unlearning methods fail to prevent illegal adaptations. We introduce FreezeAsGuard, a technique that irreversibly mitigates such misuse by selectively freezing tensors in pre-trained diffusion models that are critical to illegal adaptations, while preserving legal fine-tuning capabilities. Experiments across multiple domains show that FreezeAsGuard achieves 37% stronger mitigation of illegal adaptations with under 5% impact on legal ones.
+Text-to-image diffusion models can be fine-tuned for personalized domains, but this adaptability also enables misuse, such as forging public figures, replicating copyrighted artworks, or producing explicit content. Existing detection or unlearning methods fail to prevent illegal adaptations. We introduce FreezeAsGuard, a technique that irreversibly mitigates such misuse by selectively freezing tensors in pre-trained diffusion models that are critical to illegal adaptations, while preserving legal fine-tuning capabilities.
 

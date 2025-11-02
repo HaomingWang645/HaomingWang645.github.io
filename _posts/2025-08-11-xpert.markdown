@@ -13,5 +13,4 @@ slides: /pdfs/xpert_slides.pdf
 
 ---
 
-Personalizing Large Language Models (LLMs) is crucial for meeting individual user needs on mobile devices. However, on-device personalization faces challenges from limited computational resources and scarce personal data. We propose XPerT, a technique that fine-tunes an already personalized LLM using user data and selects models based on explainability of prior fine-tuning. Experiments on various smartphones and mainstream LLMs show that XPerT reduces computation costs by 83% and improves data efficiency by 51%.
-
+Personalizing Large Language Models (LLMs) is crucial for meeting individual user needs on mobile devices. However, on-device personalization faces challenges from limited computational resources and scarce personal data. We propose XPerT, a technique that fine-tunes an already personalized LLM using user data and selects models based on explainability of prior fine-tuning. 

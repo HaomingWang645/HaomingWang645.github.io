@@ -13,5 +13,5 @@ slides: /pdfs/feddc_slides.pdf
 
 ---
 
-Federated AIoT leverages distributed IoT data to train AI models, but heterogeneous devices introduce data heterogeneity and varying staleness, degrading model performance and slowing training. Existing FL frameworks treat device delays as independent of data heterogeneity, which is unrealistic. We propose FedDC, a technique that mitigates delay impacts when these factors are correlated. FedDC uses gradient inversion to infer local data distributions and compensate for delay-induced update bias. Experiments on heterogeneous IoT devices show that FedDC improves FL performance by up to 34% under high device delays without compromising data privacy.
+Federated AIoT leverages distributed IoT data to train AI models, but heterogeneous devices introduce data heterogeneity and varying staleness, degrading model performance and slowing training. Existing FL frameworks treat device delays as independent of data heterogeneity, which is unrealistic. We propose FedDC, a technique that mitigates delay impacts when these factors are correlated. FedDC uses gradient inversion to infer local data distributions and compensate for delay-induced update bias.
 
