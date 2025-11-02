@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Deciphering Personalization: Towards Fine-Grained Explainability in Natural Language for Personalized Image Generation Models"
+date:   2025-05-01 22:21:59 +00:00
+image: /paper_images/finexl.png
+categories: research_arxiv
+author: "Haoming Wang"
+
+authors: "<strong>Haoming Wang</strong>, Wei Gao"
+subtitle: "finexl"
+paper: /pdfs/finexl.pdf
+
+---
+
+Personalized image generation models better serve diverse user needs but often lack explainability regarding how personalization occurs. While visual cues exist, they are hard for users to interpret, and current natural language explanations are too coarse-grained to capture multiple aspects or degrees of personalization. We propose FineXL, a technique for Fine-grained eXplainability in natural Language, which generates detailed textual descriptions and quantitative scores for each personalization aspect. 
