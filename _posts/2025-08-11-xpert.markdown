@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "[Mobisys25] Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection"
+date:   2025-08-11 22:21:59 +00:00
+image: /paper_images/xpert.png
+categories: research_pub
+author: "Haoming Wang"
+venue: "In Proceedings of the 23rd Annual International Conference on Mobile Systems, Applications and Services <strong>(Acceptance Ratio: 18.0%)</strong>"
+authors: "<strong>Haoming Wang</strong>, Boyuan Yang, Xiangyu yin, Wei Gao"
+subtitle: "xpert"
+paper: /pdfs/xpert_paper.pdf
+slides: /pdfs/xpert_slides.pdf
+
+---
+
+Personalizing Large Language Models (LLMs) is crucial for meeting individual user needs on mobile devices. However, on-device personalization faces challenges from limited computational resources and scarce personal data. We propose XPerT, a technique that fine-tunes an already personalized LLM using user data and selects models based on explainability of prior fine-tuning. Experiments on various smartphones and mainstream LLMs show that XPerT reduces computation costs by 83% and improves data efficiency by 51%.
+
