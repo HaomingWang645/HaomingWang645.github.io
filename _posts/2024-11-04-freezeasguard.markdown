@@ -8,7 +8,7 @@ author: "Haoming Wang"
 
 authors: "Kai Huang, <strong>Haoming Wang (co-author)</strong>, Wei Gao"
 subtitle: "freezeasguard"
-paper: /pdfs/freezeasguard.pdf
+paper: /pdfs/freezeasguard_paper.pdf
 
 ---
 
