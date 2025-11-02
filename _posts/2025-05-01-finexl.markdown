@@ -8,7 +8,7 @@ author: "Haoming Wang"
 
 authors: "<strong>Haoming Wang</strong>, Wei Gao"
 subtitle: "finexl"
-paper: /pdfs/finexl.pdf
+paper: /pdfs/finexl_paper.pdf
 
 ---
 
