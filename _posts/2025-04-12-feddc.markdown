@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "[Mobicom25] When Device Delays Meet Data Heterogeneity in Federated AIoT Applications"
+title:  "<span style=\"color:#c00\">[MobiCom25]</span> When Device Delays Meet Data Heterogeneity in Federated AIoT Applications"
 date:   2025-05-11 22:21:59 +00:00
 image: /paper_images/feddc_method.png
 categories: research_pub
 author: "Haoming Wang"
-venue: "in Proceedings of the 31st ACM International Conference on Mobile Computing and Networking <strong>(Acceptance Ratio: 17.1%)</strong>"
+venue: "Proceedings of the 31st ACM International Conference on Mobile Computing and Networking <strong>(Acceptance Ratio: 17.1%)</strong>"
 authors: "<strong>Haoming Wang</strong>, Wei Gao"
 subtitle: "feddc"
 paper: /pdfs/feddc_paper.pdf
@@ -14,4 +14,3 @@ slides: /pdfs/feddc_slides.pdf
 ---
 
 Federated AIoT leverages distributed IoT data to train AI models, but heterogeneous devices introduce data heterogeneity and varying staleness, degrading model performance and slowing training. Existing FL frameworks treat device delays as independent of data heterogeneity, which is unrealistic. We propose FedDC, a technique that mitigates delay impacts when these factors are correlated. FedDC uses gradient inversion to infer local data distributions and compensate for delay-induced update bias.
-

@@ -99,6 +99,40 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+/* Post images */
+.project-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.wide-img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  background: #f6f6f6;
+}
+
+.top-nav {
+  text-align: center;
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+
+.top-nav a {
+  color: #1772d0;
+  padding: 0 8px;
+}
+
+.top-nav a:hover {
+  color: #f09228;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";

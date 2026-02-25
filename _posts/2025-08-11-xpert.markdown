@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "[Mobisys25] Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection"
+title:  "<span style=\"color:#c00\">[MobiSys25]</span> Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection"
 date:   2025-08-11 22:21:59 +00:00
 image: /paper_images/xpert.png
 categories: research_pub
 author: "Haoming Wang"
-venue: "In Proceedings of the 23rd Annual International Conference on Mobile Systems, Applications and Services <strong>(Acceptance Ratio: 18.0%)</strong>"
+venue: "Proceedings of the 23rd Annual International Conference on Mobile Systems, Applications and Services <strong>(Acceptance Ratio: 18.0%)</strong>"
 authors: "<strong>Haoming Wang</strong>, Boyuan Yang, Xiangyu yin, Wei Gao"
 subtitle: "xpert"
 paper: /pdfs/xpert_paper.pdf

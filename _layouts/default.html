@@ -38,11 +38,11 @@
               </p>
 
               <p>
-                My research focuses on on-device AI. I am also interested in Spatial intelligence and explainable AI.
+                My research centers on <strong>multimodal large language models for spatial reasoning</strong> and on-device deployment; I am also interested in explainability and resource-aware personalization.
               </p>
 
               <p>
-                I am on track to graduate in 2027 and am actively seeking internship opportunities for the summer of 2026. I welcome any inquiries to connect.
+                I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong>. I welcome any inquiries to connect.
               </p>
               <p style="text-align:center">
                 <a target="_blank" href="haw200@pitt.edu"> Email</a> &nbsp;/&nbsp;
@@ -58,11 +58,18 @@
           </tr>
         </table>
 
+        <div class="top-nav">
+          <a href="#recent-projects">Recent Projects</a> |
+          <a href="#publications">Publications</a> |
+          <a href="#arxiv-papers">Arxiv Papers</a> |
+          <a href="#others">Others</a>
+        </div>
+
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Recent Projects</h2>
+              <h2 id="recent-projects">Recent Projects</h2>
               <p>
                   
               </p>
@@ -76,7 +83,7 @@
           {% if cat == 'research_recent' %}
           <tr>
             <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:100%; height:auto; max-width:100%;" />
+              <img src="{{post.image}}" alt="project image" class="{{ post.image_class | default: 'project-img' }}" />
             </td>
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -84,7 +91,7 @@
               <br>
               {{post.authors}}
 
-              <br>
+              <div style="margin-top:12px;"></div>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
               {% if post.paper %}
@@ -132,7 +139,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Publications</h2>
+              <h2 id="publications">Publications</h2>
               <p>
                   
               </p>
@@ -146,7 +153,7 @@
           {% if cat == 'research_pub' %}
           <tr>
             <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="{{post.image}}" alt="project image" class="{{ post.image_class | default: 'project-img' }}" />
             </td>
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -154,7 +161,7 @@
               <br>
               {{post.authors}}
 
-              <br>
+              <div style="margin-top:12px;"></div>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
               {% if post.paper %}
@@ -198,7 +205,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Arxiv Papers</h2>
+              <h2 id="arxiv-papers">Arxiv Papers</h2>
               <p>
                   
               </p>
@@ -214,7 +221,7 @@
           {% if cat == 'research_arxiv' %}
           <tr>
             <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="{{post.image}}" alt="project image" class="{{ post.image_class | default: 'project-img' }}" />
             </td>
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -222,7 +229,7 @@
               <br>
               {{post.authors}}
 
-              <br>
+              <div style="margin-top:12px;"></div>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
               {% if post.paper %}
@@ -266,7 +273,7 @@
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Others</h2>
+              <h2 id="others">Others</h2>
               <p>
               </p>
             </td>
@@ -307,4 +314,3 @@
 </body>
 
 </html>
-
