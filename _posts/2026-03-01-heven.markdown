@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "HEVEN: Small Object Search and Navigation on VLM-Based Autonomous Mobile Systems"
+date:   2026-03-01 00:00:00 +00:00
+categories: others
+status: under-review
+author: "Haoming Wang"
+
+authors: "Anonymous Authors (incl. <strong>Haoming Wang</strong>)"
+subtitle: "heven"
+
+---
+
+The first VLM-based autonomous mobile system for small-object search and navigation. HEVEN organizes scene memory as a hierarchical Spatial Semantic Tree (rooms / areas / pillars) and uses tree-of-thought reasoning with asynchronous speculative execution to pipeline cloud VLM reasoning with physical motion, achieving ~74% success rate, ~4x SPL, and 8.7x smaller memory than SOTA on small-object navigation.

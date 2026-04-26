@@ -103,12 +103,20 @@
           </p>
 
           <p>
-            My research centers on <strong>multimodal large language models for spatial reasoning</strong> and
-            <strong>on-device deployment</strong>. I am also interested in explainability and resource-aware personalization.
+            My research focuses on <strong>generative AI on mobile systems</strong>, <strong>mobile computing</strong>,
+            and <strong>spatial intelligence</strong> — specifically multimodal LLMs for spatial reasoning,
+            on-device deployment, and resource-aware personalization with explainability.
           </p>
 
           <p>
-            I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong>.
+            I have served as a Teaching Assistant at Pitt for ECE 1175 (Embedded System Design),
+            ECE 1195 (Advanced Digital Design), ECE 1396 (Introduction to Machine Learning), and
+            ECE 2570 (Robotic Control). Before Pitt, I was a research assistant at Zhejiang University
+            working on near-ultrasonic acoustic sensing for smartphones.
+          </p>
+
+          <p>
+            I am on track to graduate in May 2027 and am actively <strong>seeking research internship opportunities</strong>.
             I welcome any inquiries to connect.
           </p>
 
@@ -306,17 +314,18 @@
         <div class="publications">
           <ol class="bibliography">
             {% for post in other_posts %}
+            {% if post.status == 'under-review' %}{% assign other_badge = 'under review' %}{% assign other_periodical = 'under review' %}{% else %}{% assign other_badge = 'note' %}{% assign other_periodical = 'technical report' %}{% endif %}
             <li>
               <div class="row">
                 <div class="col col-sm-3 abbr">
-                  <abbr class="badge rounded w-100 venue-badge preprint">
-                    <div>note</div>
+                  <abbr class="badge rounded w-100 venue-badge venue-preprint">
+                    <div>{{ other_badge }}</div>
                   </abbr>
                 </div>
                 <div class="col-sm-9">
                   <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
                   <div class="author">{{ post.authors }}</div>
-                  <div class="periodical"><em>technical report</em>, {{ post.date | date: "%Y" }}</div>
+                  <div class="periodical"><em>{{ other_periodical }}</em>, {{ post.date | date: "%Y" }}</div>
                   <div class="links">
                     {% if post.paper %}<a href="{{ post.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>{% endif %}
                     {% if post.arxiv %}<a href="{{ post.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>{% endif %}
