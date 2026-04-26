@@ -1,316 +1,332 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{{ site.name }}</title>
+  <meta name="author" content="{{ site.name }}">
+  <meta name="description" content="{{ site.description | default: 'Personal academic homepage of Haoming Wang.' }}">
+  <meta name="keywords" content="Haoming Wang, University of Pittsburgh, multimodal large language models, spatial reasoning, on-device AI">
+
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB7NF104V8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-XB7NF104V8');
   </script>
-  <title>{{ site.name }}</title>
 
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <!-- Bootstrap + MDBootstrap (al-folio uses these) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css">
 
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Icons: Font Awesome + Academicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700&display=swap">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
 </head>
 
-<body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
-                Haoming Wang
-              </h1>
-              <p>I am a PhD student at the <a href="http://www.engineering.pitt.edu/Departments/Electrical-Computer/">Department of Electrical and Computer Engineering</a> at <a href="http://www.pitt.edu/">University of Pittsburgh</a>. I am current working in <a href="https://pittisl.github.io/">Intelligent System Lab</a>, supervised by <a href="https://sites.pitt.edu/~weigao/">Dr. Wei Gao</a>. I previously earned my bachelor’s degree in Automation from the Department of Control Science and Engineering at Zhejiang University.
-              </p>
+<body class="fixed-top-nav">
 
-              <p>
-                My research centers on <strong>multimodal large language models for spatial reasoning</strong> and on-device deployment; I am also interested in explainability and resource-aware personalization.
-              </p>
+  <!-- Top navbar -->
+  <header>
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{{ site.baseurl }}/"><span class="font-weight-bold">Haoming</span> Wang</a>
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse"
+          data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ site.baseurl }}/">about</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#publications">publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#preprints">preprints</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.baseurl }}/pdfs/CV_2026_03.pdf" target="_blank">cv</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-              <p>
-                I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong>. I welcome any inquiries to connect.
-              </p>
-              <p style="text-align:center">
-                <a target="_blank" href="haw200@pitt.edu"> Email</a> &nbsp;/&nbsp;
-                <a target="_blank" href="/pdfs/CV_2026_03.pdf">CV</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/haoming-wang-40a6a7239/"> LinkedIn </a> &nbsp;/&nbsp;
-                <a href="https://www.instagram.com/haominglostthesea/">Social Media</a> 
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/avatar.png">
-            </td>
-          </tr>
-        </table>
+  <!-- Main content -->
+  <div class="container mt-5" role="main">
+    <div class="post">
 
-        <div class="top-nav">
-          <a href="#recent-projects">Recent Projects</a> |
-          <a href="#publications">Publications</a> |
-          <a href="#arxiv-papers">Arxiv Papers</a> |
-          <a href="#others">Others</a>
+      <header class="post-header">
+        <h1 class="post-title">
+          <span class="font-weight-bold">Haoming</span> Wang
+        </h1>
+        <p class="desc">PhD Student · University of Pittsburgh</p>
+      </header>
+
+      <article>
+
+        <!-- Profile + bio -->
+        <div class="profile float-right">
+          <figure>
+            <img src="{{ site.baseurl }}/{{ site.avatar }}" class="img-fluid z-depth-1 rounded" alt="profile photo" loading="eager">
+          </figure>
+          <div class="more-info">
+            <p>US, Pennsylvania, Pittsburgh</p>
+          </div>
         </div>
 
+        <div class="clearfix">
+          <p>
+            Hi! I'm Haoming Wang, a PhD student at the
+            <a href="http://www.engineering.pitt.edu/Departments/Electrical-Computer/" target="_blank">Department of Electrical and Computer Engineering</a>
+            at the <a href="http://www.pitt.edu/" target="_blank">University of Pittsburgh</a>, working in the
+            <a href="https://pittisl.github.io/" target="_blank">Intelligent System Lab</a> advised by
+            <a href="https://sites.pitt.edu/~weigao/" target="_blank">Prof. Wei Gao</a>.
+            I previously earned my bachelor's degree in Automation from the Department of Control Science and Engineering at Zhejiang University.
+          </p>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2 id="recent-projects">Recent Projects</h2>
-              <p>
-                  
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <p>
+            My research centers on <strong>multimodal large language models for spatial reasoning</strong> and
+            <strong>on-device deployment</strong>. I am also interested in explainability and resource-aware personalization.
+          </p>
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research_recent' %}
-          <tr>
-            <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" class="{{ post.image_class | default: 'project-img' }}" />
-            </td>
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              <br>
-              {{post.authors}}
+          <p>
+            I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong>.
+            I welcome any inquiries to connect.
+          </p>
 
-              <div style="margin-top:12px;"></div>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
+          <p>Contact: <strong>haw200 AT pitt.edu</strong></p>
+        </div>
 
+        <!-- News -->
+        <h2><a href="#news" id="news" style="color: inherit">news</a></h2>
+        <div class="news">
+          <div class="table-responsive" style="max-height: 60vw">
+            <table class="table table-sm table-borderless">
+              {% assign news_pub = site.posts | where: "categories", "research_pub" %}
+              {% assign news_recent = site.posts | where: "categories", "research_recent" %}
+              {% assign news_arxiv = site.posts | where: "categories", "research_arxiv" %}
+              {% assign news_combined = news_recent | concat: news_pub | concat: news_arxiv | sort: "date" | reverse %}
+              {% for post in news_combined limit: 8 %}
+              <tr>
+                <th scope="row" style="width: 22%;">{{ post.date | date: "%b %d, %Y" }}</th>
+                <td>
+                  {% if post.categories contains 'research_pub' %}
+                    Paper accepted: <a href="{{ post.paper }}" target="_blank">{{ post.title | strip_html }}</a>
+                  {% elsif post.categories contains 'research_recent' %}
+                    New work: <a href="{{ post.paper }}" target="_blank">{{ post.title | strip_html }}</a>
+                  {% else %}
+                    New preprint: <a href="{% if post.arxiv %}{{ post.arxiv }}{% else %}{{ post.paper }}{% endif %}" target="_blank">{{ post.title | strip_html }}</a>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
 
+        <!-- Recent / highlighted projects -->
+        {% assign recent_posts = site.posts | where: "categories", "research_recent" %}
+        {% if recent_posts.size > 0 %}
+        <h2><a id="recent" style="color: inherit">recent work</a></h2>
+        <div class="publications">
+          <ol class="bibliography">
+            {% for post in recent_posts %}
+            <li>
+              <div class="row">
+                <div class="col col-sm-3 abbr">
+                  <abbr class="badge rounded w-100 venue-badge">
+                    <div>{{ post.venue | default: "preprint" | strip_html | truncate: 18 }}</div>
+                  </abbr>
+                  {% if post.image %}
+                  <figure>
+                    <img src="{{ post.image }}" class="preview z-depth-1 rounded" alt="{{ post.subtitle }}" loading="eager">
+                  </figure>
+                  {% endif %}
+                </div>
+                <div class="col-sm-9">
+                  <div class="title">{{ post.title }}</div>
+                  <div class="author">{{ post.authors }}</div>
+                  <div class="periodical">
+                    {% if post.venue %}<em>{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
+                  </div>
+                  <div class="links">
+                    {% if post.paper %}<a href="{{ post.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>{% endif %}
+                    {% if post.arxiv %}<a href="{{ post.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>{% endif %}
+                    {% if post.code %}<a href="{{ post.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>{% endif %}
+                    {% if post.poster %}<a href="{{ post.poster }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>{% endif %}
+                    {% if post.slides %}<a href="{{ post.slides }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides</a>{% endif %}
+                    {% if post.website %}<a href="{{ post.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>{% endif %}
+                    {% if post.video %}<a href="{{ post.video }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Video</a>{% endif %}
+                  </div>
+                  {% if post.excerpt %}<div class="abstract">{{ post.excerpt }}</div>{% endif %}
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% endif %}
 
+        <!-- Selected publications -->
+        <h2><a id="publications" style="color: inherit">selected publications</a></h2>
+        <div class="publications">
+          <ol class="bibliography">
+            {% assign pub_posts = site.posts | where: "categories", "research_pub" %}
+            {% for post in pub_posts %}
+            <li>
+              <div class="row">
+                <div class="col col-sm-3 abbr">
+                  <abbr class="badge rounded w-100 venue-badge">
+                    <div>{% if post.title contains 'AAAI' %}AAAI{% elsif post.title contains 'CVPR' %}CVPR{% elsif post.title contains 'ICCV' %}ICCV{% elsif post.title contains 'MobiCom' %}MobiCom{% elsif post.title contains 'MobiSys' %}MobiSys{% elsif post.title contains 'NeurIPS' %}NeurIPS{% else %}venue{% endif %}</div>
+                  </abbr>
+                  {% if post.image %}
+                  <figure>
+                    <img src="{{ post.image }}" class="preview z-depth-1 rounded" alt="{{ post.subtitle }}" loading="eager">
+                  </figure>
+                  {% endif %}
+                </div>
+                <div class="col-sm-9">
+                  <div class="title">{{ post.title }}</div>
+                  <div class="author">{{ post.authors }}</div>
+                  <div class="periodical">
+                    {% if post.venue %}<em>{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
+                  </div>
+                  <div class="links">
+                    {% if post.paper %}<a href="{{ post.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>{% endif %}
+                    {% if post.arxiv %}<a href="{{ post.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>{% endif %}
+                    {% if post.code %}<a href="{{ post.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>{% endif %}
+                    {% if post.poster %}<a href="{{ post.poster }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>{% endif %}
+                    {% if post.slides %}<a href="{{ post.slides }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides</a>{% endif %}
+                    {% if post.website %}<a href="{{ post.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>{% endif %}
+                    {% if post.video %}<a href="{{ post.video }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Video</a>{% endif %}
+                  </div>
+                  {% if post.excerpt %}<div class="abstract">{{ post.excerpt }}</div>{% endif %}
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
 
+        <!-- Preprints -->
+        {% assign arxiv_posts = site.posts | where: "categories", "research_arxiv" %}
+        {% if arxiv_posts.size > 0 %}
+        <h2><a id="preprints" style="color: inherit">preprints</a></h2>
+        <div class="publications">
+          <ol class="bibliography">
+            {% for post in arxiv_posts %}
+            <li>
+              <div class="row">
+                <div class="col col-sm-3 abbr">
+                  <abbr class="badge rounded w-100 venue-badge preprint">
+                    <div>preprint</div>
+                  </abbr>
+                  {% if post.image %}
+                  <figure>
+                    <img src="{{ post.image }}" class="preview z-depth-1 rounded" alt="{{ post.subtitle }}" loading="eager">
+                  </figure>
+                  {% endif %}
+                </div>
+                <div class="col-sm-9">
+                  <div class="title">{{ post.title }}</div>
+                  <div class="author">{{ post.authors }}</div>
+                  <div class="periodical">
+                    <em>preprint</em>, {{ post.date | date: "%Y" }}
+                  </div>
+                  <div class="links">
+                    {% if post.paper %}<a href="{{ post.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>{% endif %}
+                    {% if post.arxiv %}<a href="{{ post.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>{% endif %}
+                    {% if post.code %}<a href="{{ post.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>{% endif %}
+                  </div>
+                  {% if post.excerpt %}<div class="abstract">{{ post.excerpt }}</div>{% endif %}
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% endif %}
 
+        <!-- Other -->
+        {% assign other_posts = site.posts | where: "categories", "others" %}
+        {% if other_posts.size > 0 %}
+        <h2><a id="others" style="color: inherit">other</a></h2>
+        <div class="publications">
+          <ol class="bibliography">
+            {% for post in other_posts %}
+            <li>
+              <div class="row">
+                <div class="col col-sm-3 abbr">
+                  <abbr class="badge rounded w-100 venue-badge preprint">
+                    <div>note</div>
+                  </abbr>
+                </div>
+                <div class="col-sm-9">
+                  <div class="title">{{ post.title }}</div>
+                  <div class="author">{{ post.authors }}</div>
+                  <div class="periodical"><em>technical report</em>, {{ post.date | date: "%Y" }}</div>
+                  <div class="links">
+                    {% if post.paper %}<a href="{{ post.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>{% endif %}
+                    {% if post.arxiv %}<a href="{{ post.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>{% endif %}
+                    {% if post.code %}<a href="{{ post.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>{% endif %}
+                  </div>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% endif %}
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2 id="publications">Publications</h2>
-              <p>
-                  
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <!-- Social icons -->
+        <div class="social">
+          <div class="contact-icons">
+            <a href="mailto:{{ site.footer-links.email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}/" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            {% if site.footer-links.github %}
+            <a href="https://github.com/{{ site.footer-links.github }}" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+            {% endif %}
+            {% if site.footer-links.instagram %}
+            <a href="https://www.instagram.com/{{ site.footer-links.instagram }}/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            {% endif %}
+          </div>
+          <div class="contact-note"></div>
+        </div>
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research_pub' %}
-          <tr>
-            <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" class="{{ post.image_class | default: 'project-img' }}" />
-            </td>
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              <br>
-              {{post.authors}}
+      </article>
+    </div>
+  </div>
 
-              <div style="margin-top:12px;"></div>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
-        
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; {{ 'now' | date: "%Y" }} {{ site.name }}. Built with
+      <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, styled after the
+      <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme. Hosted by
+      <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+    </div>
+  </footer>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2 id="arxiv-papers">Arxiv Papers</h2>
-              <p>
-                  
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research_arxiv' %}
-          <tr>
-            <td style="padding:2.5%;width:40%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" class="{{ post.image_class | default: 'project-img' }}" />
-            </td>
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              <br>
-              {{post.authors}}
-
-              <div style="margin-top:12px;"></div>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
-        
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2 id="others">Others</h2>
-              <p>
-              </p>
-            </td>
-          </tr>
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'others' %}
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <div style="margin-top:5px;"></div> 
-              
-              {{post.authors}}
-
-              <br>
-              
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a>
-              {% endif %}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
