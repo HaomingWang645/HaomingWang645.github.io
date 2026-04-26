@@ -115,6 +115,27 @@
           <p>Contact: <strong>haw200 AT pitt.edu</strong></p>
         </div>
 
+        <!-- Social icons -->
+        <div class="social">
+          <div class="contact-icons">
+            <a href="mailto:{{ site.footer-links.email }}" title="Email">
+              <img src="{{ site.baseurl }}/images/icons/gmail.svg" alt="Email">
+            </a>
+            <a href="https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ&hl=en" title="Google Scholar" target="_blank">
+              <img src="{{ site.baseurl }}/images/icons/googlescholar.svg" alt="Google Scholar">
+            </a>
+            <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}/" title="LinkedIn" target="_blank">
+              <img src="{{ site.baseurl }}/images/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            {% if site.footer-links.instagram %}
+            <a href="https://www.instagram.com/{{ site.footer-links.instagram }}/" title="Instagram" target="_blank">
+              <img src="{{ site.baseurl }}/images/icons/instagram.svg" alt="Instagram">
+            </a>
+            {% endif %}
+          </div>
+          <div class="contact-note"></div>
+        </div>
+
         <!-- News -->
         <h2><a href="#news" id="news" style="color: inherit">news</a></h2>
         <div class="news">
@@ -152,8 +173,8 @@
             <li>
               <div class="row">
                 <div class="col col-sm-3 abbr">
-                  <abbr class="badge rounded w-100 venue-badge">
-                    <div>{{ post.venue | default: "preprint" | strip_html | truncate: 18 }}</div>
+                  <abbr class="badge rounded w-100 venue-badge venue-preprint">
+                    <div>preprint</div>
                   </abbr>
                   {% if post.image %}
                   <figure>
@@ -162,7 +183,7 @@
                   {% endif %}
                 </div>
                 <div class="col-sm-9">
-                  <div class="title">{{ post.title }}</div>
+                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical">
                     {% if post.venue %}<em>{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
@@ -191,11 +212,24 @@
           <ol class="bibliography">
             {% assign pub_posts = site.posts | where: "categories", "research_pub" %}
             {% for post in pub_posts %}
+            {% assign venue_class = 'venue-default' %}
+            {% if post.title contains 'AAAI' %}{% assign venue_short = 'AAAI' %}{% assign venue_class = 'venue-aaai' %}
+            {% elsif post.title contains 'CVPR' %}
+              {% if post.title contains 'oral' %}{% assign venue_short = 'CVPR oral' %}{% else %}{% assign venue_short = 'CVPR' %}{% endif %}
+              {% assign venue_class = 'venue-cvpr' %}
+            {% elsif post.title contains 'ICCV' %}
+              {% if post.title contains 'highlight' %}{% assign venue_short = 'ICCV highlight' %}{% else %}{% assign venue_short = 'ICCV' %}{% endif %}
+              {% assign venue_class = 'venue-iccv' %}
+            {% elsif post.title contains 'MobiCom' %}{% assign venue_short = 'MobiCom' %}{% assign venue_class = 'venue-mobicom' %}
+            {% elsif post.title contains 'MobiSys' %}{% assign venue_short = 'MobiSys' %}{% assign venue_class = 'venue-mobisys' %}
+            {% elsif post.title contains 'NeurIPS' %}{% assign venue_short = 'NeurIPS' %}{% assign venue_class = 'venue-neurips' %}
+            {% elsif post.title contains 'ICLR' %}{% assign venue_short = 'ICLR' %}{% assign venue_class = 'venue-iclr' %}
+            {% else %}{% assign venue_short = 'venue' %}{% endif %}
             <li>
               <div class="row">
                 <div class="col col-sm-3 abbr">
-                  <abbr class="badge rounded w-100 venue-badge">
-                    <div>{% if post.title contains 'AAAI' %}AAAI{% elsif post.title contains 'CVPR' %}CVPR{% elsif post.title contains 'ICCV' %}ICCV{% elsif post.title contains 'MobiCom' %}MobiCom{% elsif post.title contains 'MobiSys' %}MobiSys{% elsif post.title contains 'NeurIPS' %}NeurIPS{% else %}venue{% endif %}</div>
+                  <abbr class="badge rounded w-100 venue-badge {{ venue_class }}">
+                    <div>{{ venue_short }}</div>
                   </abbr>
                   {% if post.image %}
                   <figure>
@@ -204,7 +238,7 @@
                   {% endif %}
                 </div>
                 <div class="col-sm-9">
-                  <div class="title">{{ post.title }}</div>
+                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical">
                     {% if post.venue %}<em>{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
@@ -246,7 +280,7 @@
                   {% endif %}
                 </div>
                 <div class="col-sm-9">
-                  <div class="title">{{ post.title }}</div>
+                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical">
                     <em>preprint</em>, {{ post.date | date: "%Y" }}
@@ -280,7 +314,7 @@
                   </abbr>
                 </div>
                 <div class="col-sm-9">
-                  <div class="title">{{ post.title }}</div>
+                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical"><em>technical report</em>, {{ post.date | date: "%Y" }}</div>
                   <div class="links">
@@ -295,22 +329,6 @@
           </ol>
         </div>
         {% endif %}
-
-        <!-- Social icons -->
-        <div class="social">
-          <div class="contact-icons">
-            <a href="mailto:{{ site.footer-links.email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
-            <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}/" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            {% if site.footer-links.github %}
-            <a href="https://github.com/{{ site.footer-links.github }}" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
-            {% endif %}
-            {% if site.footer-links.instagram %}
-            <a href="https://www.instagram.com/{{ site.footer-links.instagram }}/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            {% endif %}
-          </div>
-          <div class="contact-note"></div>
-        </div>
 
       </article>
     </div>

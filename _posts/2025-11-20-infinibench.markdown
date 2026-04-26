@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "<span style=\"color:#c00\">[CVPR26]</span> <strong>InfiniBench</strong>: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity"
+title:  "<span style=\"color:#c00\">[CVPR26 oral]</span> <strong>InfiniBench</strong>: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity"
 date:   2026-02-25 00:00:00 +00:00
 image: /paper_images/infinigen_vertical.png
 categories: research_pub

@@ -1,30 +1,43 @@
 ---
 ---
 
-// Color palette (al-folio inspired)
+// ===== Color palette =====
 $body-bg: #ffffff;
-$body-color: #212529;
+$body-color: #1f2328;
 $muted-color: #6c757d;
-$link-color: #b509ac;          // al-folio's accent purple
+$soft-bg: #fafbfc;
+$link-color: #b509ac;
 $link-hover: #f09228;
 $accent: #b509ac;
-$border-color: #e8e8e8;
-$badge-bg: #00369f;
-$badge-bg-alt: #c23111;
-$badge-bg-preprint: #6c757d;
+$border-color: #eaecef;
+$rule-color: #d8dce0;
+
+// Venue accent colors
+$venue-cvpr:    #00369f;
+$venue-iccv:    #0d47a1;
+$venue-aaai:    #c23111;
+$venue-mobicom: #00897b;
+$venue-mobisys: #009688;
+$venue-neurips: #6f42c1;
+$venue-iclr:    #d97706;
+$venue-default: #455a64;
+$venue-preprint:#6c757d;
 
 * { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: $body-color;
   background: $body-bg;
-  padding-top: 56px;          // room for fixed navbar
-  padding-bottom: 60px;       // room for fixed footer
+  padding-top: 56px;
+  padding-bottom: 60px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -38,124 +51,168 @@ a:hover, a:focus {
 }
 
 strong { font-weight: 700; }
+em { font-style: italic; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab', 'Roboto', serif;
   font-weight: 300;
   margin-top: 0;
+  letter-spacing: -0.01em;
 }
 
 // ===== Navbar =====
 .navbar {
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid $border-color;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
+  min-height: 52px;
 }
 .navbar-brand {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: $body-color !important;
+  letter-spacing: 0;
 }
 .navbar-brand .font-weight-bold { font-weight: 700; }
 .navbar-nav .nav-link {
   color: $body-color !important;
   font-weight: 400;
-  padding: 0.5rem 0.85rem !important;
+  padding: 0.4rem 0.85rem !important;
   text-transform: lowercase;
   font-size: 0.95rem;
+  position: relative;
 }
-.navbar-nav .nav-link:hover { color: $link-color !important; }
-.navbar-nav .nav-item.active .nav-link { color: $link-color !important; font-weight: 500; }
-.navbar-toggler {
-  border: none;
-  padding: 0.25rem 0.5rem;
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.85rem; right: 0.85rem; bottom: 0.15rem;
+  height: 1px;
+  background: $accent;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
 }
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-item.active .nav-link::after { transform: scaleX(1); }
+.navbar-nav .nav-link:hover { color: $accent !important; }
+.navbar-nav .nav-item.active .nav-link { color: $accent !important; font-weight: 500; }
+
+.navbar-toggler { border: none; padding: 0.25rem 0.5rem; }
 .navbar-toggler .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 4px 0;
-  background: $body-color;
+  display: block; width: 22px; height: 2px; margin: 4px 0; background: $body-color;
 }
 
-// ===== Post header =====
-.post-header {
-  margin: 2rem 0 1.5rem;
-}
+// ===== Hero =====
+.post-header { margin: 2.5rem 0 1.75rem; }
 .post-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 300;
-  letter-spacing: -0.5px;
-  margin-bottom: 0.25rem;
+  letter-spacing: -1px;
+  margin-bottom: 0.35rem;
+  line-height: 1.05;
 }
-.post-title .font-weight-bold { font-weight: 700; }
+.post-title .font-weight-bold {
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
 .desc {
   color: $muted-color;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  font-weight: 300;
   margin: 0;
+  letter-spacing: 0.01em;
 }
 
-// ===== Profile / about =====
+// ===== Profile =====
 .profile {
   width: 270px;
   max-width: 30vw;
-  margin: 0 0 1.5rem 1.5rem;
+  margin: 0 0 1.5rem 1.75rem;
 }
 .profile figure { margin: 0; }
 .profile img {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 0.65rem;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.12), 0 1px 3px rgba(15,23,42,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15,23,42,0.16), 0 2px 6px rgba(15,23,42,0.08);
 }
 .profile .more-info {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
   color: $muted-color;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 .profile .more-info p { margin: 0; }
 
 @media (max-width: 575px) {
   .profile {
-    width: 95vw;
-    max-width: 95vw;
+    width: 60vw; max-width: 60vw;
     float: none !important;
     margin: 0 auto 1.5rem;
   }
+  .post-title { font-size: 2.5rem; }
 }
+
+// Bio paragraph spacing
+.clearfix p { margin-bottom: 0.85rem; font-size: 1rem; }
+.clearfix p:last-child { margin-bottom: 0; }
 
 // ===== Section headings =====
 h2 {
   margin-top: 3rem;
-  margin-bottom: 1rem;
-  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.85rem;
   font-weight: 300;
-  border-bottom: 1px solid $border-color;
-  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $rule-color;
+  padding-bottom: 0.45rem;
   text-transform: lowercase;
+  letter-spacing: -0.02em;
+  color: $body-color;
 }
 h2 a { color: inherit; }
+h2 a:hover { color: $accent; }
 
-// ===== News table =====
+// ===== News =====
 .news .table {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
 }
 .news .table th {
   font-weight: 500;
-  color: $muted-color;
+  color: $accent;
   border: none;
-  padding: 0.4rem 0.75rem 0.4rem 0;
+  padding: 0.5rem 0.85rem 0.5rem 0;
   vertical-align: top;
   white-space: nowrap;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
 }
 .news .table td {
   border: none;
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
   vertical-align: top;
+  color: $body-color;
+}
+.news .table tr + tr { border-top: 1px dashed lighten($border-color, 2%); }
+.news .table a {
+  color: $body-color;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.news .table a:hover {
+  color: $accent;
+  border-bottom-color: $accent;
 }
 
 // ===== Publications =====
@@ -165,111 +222,174 @@ h2 a { color: inherit; }
   margin: 0;
 }
 .publications .bibliography > li {
-  padding: 1.25rem 0;
+  padding: 1.4rem 0;
   border-bottom: 1px solid $border-color;
+  transition: background 0.2s ease;
+}
+.publications .bibliography > li:hover {
+  background: $soft-bg;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .publications .bibliography > li:last-child { border-bottom: none; }
 
-.publications .abbr {
-  text-align: center;
-}
+.publications .abbr { text-align: center; }
+
+// Venue badge — base
 .publications .venue-badge {
   display: block;
-  background: $badge-bg;
+  background: $venue-default;
   color: #fff;
   font-size: 0.85rem;
   font-weight: 500;
-  padding: 0.35rem 0.5rem;
-  border-radius: 0.25rem;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.65rem;
   text-decoration: none;
+  text-transform: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
 }
-.publications .venue-badge.preprint { background: $badge-bg-preprint; }
 .publications .venue-badge div { color: #fff; }
 
-.publications figure {
-  margin: 0;
-}
+// Per-venue colors
+.venue-cvpr     { background: $venue-cvpr !important; }
+.venue-iccv     { background: $venue-iccv !important; }
+.venue-aaai     { background: $venue-aaai !important; }
+.venue-mobicom  { background: $venue-mobicom !important; }
+.venue-mobisys  { background: $venue-mobisys !important; }
+.venue-neurips  { background: $venue-neurips !important; }
+.venue-iclr     { background: $venue-iclr !important; }
+.venue-preprint { background: $venue-preprint !important; }
+
+.publications figure { margin: 0; }
 .publications .preview {
   width: 100%;
   height: auto;
-  border-radius: 0.25rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: 0.35rem;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.publications .bibliography > li:hover .preview {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(15,23,42,0.12);
 }
 
 .publications .title {
-  font-size: 1.05rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.35;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
   color: $body-color;
 }
+.publications .title strong { font-weight: 700; }
+
 .publications .author {
   font-size: 0.95rem;
   color: $body-color;
   margin-bottom: 0.25rem;
 }
-.publications .author em { font-style: italic; color: $accent; }
+// Highlight the author's name (always wrapped in <strong> in posts)
+.publications .author strong {
+  color: $accent;
+  font-weight: 600;
+}
+.publications .author em { font-style: italic; }
+
 .publications .periodical {
   font-size: 0.9rem;
   color: $muted-color;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
 }
-.publications .links { margin: 0.4rem 0 0.4rem; }
+.publications .periodical em { color: $body-color; font-style: italic; }
+.publications .periodical strong { color: $body-color; }
+
+.publications .links { margin: 0.45rem 0 0.45rem; }
 .publications .links .btn {
   font-size: 0.78rem;
-  padding: 0.15rem 0.55rem;
-  margin: 0 0.15rem 0.25rem 0;
-  background: #f5f5f5;
+  font-weight: 500;
+  padding: 0.2rem 0.7rem;
+  margin: 0 0.3rem 0.3rem 0;
+  background: #fff;
   color: $body-color;
   border: 1px solid $border-color;
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   text-transform: none;
   letter-spacing: 0;
   box-shadow: none;
+  transition: all 0.15s ease;
 }
 .publications .links .btn:hover {
-  background: $link-color;
+  background: $accent;
   color: #fff;
-  border-color: $link-color;
+  border-color: $accent;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(181,9,172,0.25);
 }
+
 .publications .abstract {
-  font-size: 0.9rem;
-  color: $muted-color;
-  margin-top: 0.5rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  color: lighten($body-color, 18%);
+  margin-top: 0.55rem;
+  line-height: 1.55;
 }
 .publications .abstract p { margin: 0; }
 
 // ===== Social icons =====
 .social {
-  margin-top: 3rem;
+  margin: 1.75rem 0 0.5rem;
   text-align: center;
 }
 .contact-icons {
-  font-size: 1.4rem;
+  display: inline-flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 .contact-icons a {
-  color: $body-color;
-  margin: 0 0.5rem;
+  display: inline-flex;
+  width: 3.4rem; height: 3.4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid $border-color;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.06);
+  transition: all 0.2s ease;
+  overflow: hidden;
 }
-.contact-icons a:hover { color: $link-color; }
+.contact-icons a img {
+  width: 1.85rem;
+  height: 1.85rem;
+  display: block;
+  transition: transform 0.2s ease;
+}
+.contact-icons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(15,23,42,0.15);
+  border-color: transparent;
+}
+.contact-icons a:hover img { transform: scale(1.1); }
 
 // ===== Footer =====
 footer.fixed-bottom {
-  background: #fafafa;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-top: 1px solid $border-color;
   padding: 0.5rem 0;
   font-size: 0.82rem;
   color: $muted-color;
   text-align: center;
 }
-footer.fixed-bottom a { color: $muted-color; }
-footer.fixed-bottom a:hover { color: $link-color; }
+footer.fixed-bottom a { color: $accent; }
+footer.fixed-bottom a:hover { color: $link-hover; }
 
 // ===== Utilities =====
-.z-depth-1 { box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 0 2px 10px 0 rgba(0,0,0,.05); }
-.rounded { border-radius: 0.25rem !important; }
+.z-depth-1 { box-shadow: 0 2px 5px 0 rgba(0,0,0,.08), 0 2px 10px 0 rgba(0,0,0,.04); }
+.rounded { border-radius: 0.3rem !important; }
 .clearfix::after { content: ""; clear: both; display: table; }
 
 // Stack columns on small screens for publication rows
@@ -281,3 +401,6 @@ footer.fixed-bottom a:hover { color: $link-color; }
     margin-bottom: 0.5rem;
   }
 }
+
+// Reduce visual loudness of legacy colored brackets in titles
+.publications .title span[style*="#c00"] { color: $muted-color !important; font-weight: 500; }
