@@ -103,20 +103,12 @@
           </p>
 
           <p>
-            My research focuses on <strong>generative AI on mobile systems</strong>, <strong>mobile computing</strong>,
-            and <strong>spatial intelligence</strong> — specifically multimodal LLMs for spatial reasoning,
-            on-device deployment, and resource-aware personalization with explainability.
+            My research centers on <strong>multimodal large language models for spatial reasoning</strong> and
+            <strong>on-device deployment</strong>. I am also interested in explainability and resource-aware personalization.
           </p>
 
           <p>
-            I have served as a Teaching Assistant at Pitt for ECE 1175 (Embedded System Design),
-            ECE 1195 (Advanced Digital Design), ECE 1396 (Introduction to Machine Learning), and
-            ECE 2570 (Robotic Control). Before Pitt, I was a research assistant at Zhejiang University
-            working on near-ultrasonic acoustic sensing for smartphones.
-          </p>
-
-          <p>
-            I am on track to graduate in May 2027 and am actively <strong>seeking research internship opportunities</strong>.
+            I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong>.
             I welcome any inquiries to connect.
           </p>
 
@@ -149,20 +141,26 @@
         <div class="news">
           <div class="table-responsive" style="max-height: 60vw">
             <table class="table table-sm table-borderless">
+              {% assign news_award = site.posts | where: "categories", "news_item" %}
               {% assign news_pub = site.posts | where: "categories", "research_pub" %}
               {% assign news_recent = site.posts | where: "categories", "research_recent" %}
               {% assign news_arxiv = site.posts | where: "categories", "research_arxiv" %}
-              {% assign news_combined = news_recent | concat: news_pub | concat: news_arxiv | sort: "date" | reverse %}
+              {% assign news_combined = news_award | concat: news_recent | concat: news_pub | concat: news_arxiv | sort: "date" | reverse %}
               {% for post in news_combined limit: 8 %}
               <tr>
                 <th scope="row" style="width: 22%;">{{ post.date | date: "%b %d, %Y" }}</th>
                 <td>
-                  {% if post.categories contains 'research_pub' %}
-                    Paper accepted: <a href="{{ post.paper }}" target="_blank">{{ post.title | strip_html }}</a>
-                  {% elsif post.categories contains 'research_recent' %}
-                    New work: <a href="{{ post.paper }}" target="_blank">{{ post.title | strip_html }}</a>
+                  {% if post.categories contains 'news_item' %}
+                    {{ post.news_text }}{% if post.news_link %} <a href="{{ post.news_link }}" target="_blank">[link]</a>{% endif %}
                   {% else %}
-                    New preprint: <a href="{% if post.arxiv %}{{ post.arxiv }}{% else %}{{ post.paper }}{% endif %}" target="_blank">{{ post.title | strip_html }}</a>
+                    {% assign news_title = post.title | replace: '<span style="color:#c00">', '<strong class="news-venue">' | replace: '</span>', '</strong>' %}
+                    {% if post.categories contains 'research_pub' %}
+                      Paper accepted: <a href="{{ post.paper }}" target="_blank">{{ news_title }}</a>
+                    {% elsif post.categories contains 'research_recent' %}
+                      New work: <a href="{{ post.paper }}" target="_blank">{{ news_title }}</a>
+                    {% else %}
+                      New preprint: <a href="{% if post.arxiv %}{{ post.arxiv }}{% else %}{{ post.paper }}{% endif %}" target="_blank">{{ news_title }}</a>
+                    {% endif %}
                   {% endif %}
                 </td>
               </tr>
@@ -338,6 +336,38 @@
           </ol>
         </div>
         {% endif %}
+
+        <!-- Experience -->
+        <h2><a id="experience" style="color: inherit">experience</a></h2>
+        <div class="experience">
+          <div class="exp-item">
+            <div class="exp-period">Sept 2024 &mdash; Present</div>
+            <div class="exp-body">
+              <div class="exp-role"><strong>Teaching Assistant</strong>, Department of Electrical and Computer Engineering, University of Pittsburgh</div>
+              <ul class="exp-list">
+                <li>ECE 1175 &mdash; Embedded System Design (Fall 2024)</li>
+                <li>ECE 1195 &mdash; Advanced Digital Design (Spring 2025)</li>
+                <li>ECE 1396 &mdash; Introduction to Machine Learning (Fall 2025)</li>
+                <li>ECE 2570 &mdash; Robotic Control (Spring 2026)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-period">Sept 2020 &mdash; Jun 2022</div>
+            <div class="exp-body">
+              <div class="exp-role"><strong>Research Assistant</strong>, Department of Control Science and Engineering, Zhejiang University</div>
+              <div class="exp-detail">Signal design and processing for near-ultrasonic acoustic sensing systems on smartphones.</div>
+            </div>
+          </div>
+
+          <div class="exp-keywords">
+            <span class="exp-label">Research interests:</span>
+            <span class="exp-tag">Generative AI on Mobile Systems</span>
+            <span class="exp-tag">Mobile Computing</span>
+            <span class="exp-tag">Spatial Intelligence</span>
+          </div>
+        </div>
 
       </article>
     </div>
