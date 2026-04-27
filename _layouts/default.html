@@ -61,7 +61,13 @@
               <a class="nav-link" href="#preprints">preprints</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/pdfs/CV_2026_03.pdf" target="_blank">cv</a>
+              {% assign latest_cv = '' %}
+              {% for f in site.static_files %}
+                {% if f.path contains '/pdfs/CV_' and f.extname == '.pdf' %}
+                  {% if f.path > latest_cv %}{% assign latest_cv = f.path %}{% endif %}
+                {% endif %}
+              {% endfor %}
+              <a class="nav-link" href="{{ site.baseurl }}{{ latest_cv }}" target="_blank">cv</a>
             </li>
           </ul>
         </div>
