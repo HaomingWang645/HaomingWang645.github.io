@@ -6,9 +6,9 @@ $body-bg: #f5f4f1;          // warm off-white
 $body-color: #14171a;       // near-black
 $muted-color: #6c757d;
 $soft-bg: #ffffff;
-$link-color: #b09060;       // warm copper/brown (al-folio default)
-$link-hover: #d4a373;
-$accent: #b09060;
+$link-color: #7d5a26;       // warm dark brown — higher contrast on cream
+$link-hover: #5a3f15;
+$accent: #7d5a26;
 $border-color: #e3ddd0;     // warm border
 $rule-color: #d8d2c4;
 
@@ -300,9 +300,16 @@ h2 a:hover { color: $accent; }
   margin-bottom: 0.3rem;
 }
 .publications .author strong {
-  color: $accent;
+  color: $body-color;
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
+  background: rgba(125, 90, 38, 0.18);
+  padding: 0.05rem 0.35rem;
+  border-radius: 0.2rem;
+  text-decoration: underline;
+  text-decoration-color: $accent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 .publications .author em { font-style: italic; }
 
@@ -413,6 +420,23 @@ h2 a:hover { color: $accent; }
 @media (max-width: 575px) {
   .exp-item { flex-direction: column; gap: 0.3rem; }
   .exp-period { flex: 0 0 auto; }
+}
+
+// ===== Visitors =====
+.visitors {
+  text-align: center;
+  margin: 1rem auto 0.5rem;
+  max-width: 360px;
+}
+.visitors > * {
+  max-width: 100%;
+}
+.visitors img,
+.visitors canvas,
+.visitors iframe {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 0.4rem;
 }
 
 // ===== Social icons =====

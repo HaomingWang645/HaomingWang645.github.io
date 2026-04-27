@@ -11,6 +11,11 @@ description: PhD student in ECE at the University of Pittsburgh — multimodal L
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: images/avatar.png
 
+# ClustrMaps visitor tracker — paste the ID from your ClustrMaps embed code
+# (the value of "d=" in the image URL, or the URL slug after "/site/")
+# Leave blank to hide the visitors section.
+clustrmaps_id: "P_lKEi5O13EFQe7Lij3GfRfYSskQJve8353ipK6a6HE"
+
 #
 # Flags below are optional
 #

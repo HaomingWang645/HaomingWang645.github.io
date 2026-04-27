@@ -375,6 +375,14 @@
           </div>
         </div>
 
+        {% if site.clustrmaps_id and site.clustrmaps_id != "" %}
+        <!-- Visitors -->
+        <h2><a id="visitors" style="color: inherit">visitors</a></h2>
+        <div class="visitors">
+          <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d={{ site.clustrmaps_id }}&cl=ffffff&w=a"></script>
+        </div>
+        {% endif %}
+
       </article>
     </div>
   </div>
