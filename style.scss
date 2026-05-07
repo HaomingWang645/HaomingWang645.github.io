@@ -526,54 +526,47 @@ h2 a:hover { color: $accent; }
   border-radius: 1rem;
 }
 
-// Gallery — fixed-size thumbnails wrapped in flex rows
+// Gallery — uniform row height; native aspect ratio (width auto)
 .gallery-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin: 0;
+  align-items: flex-start;
 }
 
 .gallery-item {
   display: block;
   flex: 0 0 auto;
-  width: 200px;
-  height: 150px;
-  overflow: hidden;
+  height: 200px;
   border-radius: 0.5rem;
+  overflow: hidden;
   background: #ddd;
   box-shadow: 0 2px 6px rgba(15,23,42,0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
+  line-height: 0;
 }
-.gallery-grid.two-col .gallery-item { width: 280px; height: 200px; }
-.gallery-grid.three-col .gallery-item { width: 240px; height: 180px; }
 
 .gallery-item img {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
+  width: auto;
   display: block;
+  max-width: none;
   transition: transform 0.4s ease, filter 0.25s ease;
   filter: saturate(0.95);
 }
+
 .gallery-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(15,23,42,0.18);
 }
 .gallery-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.04);
   filter: saturate(1.1);
 }
 
 @media (max-width: 575px) {
-  .gallery-item,
-  .gallery-grid.two-col .gallery-item,
-  .gallery-grid.three-col .gallery-item {
-    width: calc(50% - 0.4rem);
-    height: auto;
-    aspect-ratio: 4 / 3;
-  }
+  .gallery-item { height: 140px; }
 }
 
 // Tinker card
