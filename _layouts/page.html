@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{{ page.title | default: site.name }}</title>
+  <meta name="author" content="{{ site.name }}">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB7NF104V8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XB7NF104V8');
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Roboto+Mono:400,500&display=swap">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+</head>
+
+<body class="fixed-top-nav">
+
+  {% include navbar.html %}
+
+  <div class="container mt-5" role="main">
+    <div class="post page-content">
+      {% if page.title %}
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="desc">{{ page.subtitle }}</p>{% endif %}
+      </header>
+      {% endif %}
+
+      <article>
+        {{ content }}
+      </article>
+    </div>
+  </div>
+
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; {{ 'now' | date: "%Y" }} {{ site.name }}. Built with
+      <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, styled after the
+      <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme. Hosted by
+      <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
