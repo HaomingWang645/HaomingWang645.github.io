@@ -2,6 +2,7 @@
 layout: post
 title:  "Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models"
 date:   2026-05-07 00:00:00 +00:00
+image: /paper_images/vlm-latent-shaping.png
 categories: research_recent
 author: "Haoming Wang"
 
