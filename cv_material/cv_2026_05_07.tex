@@ -1,0 +1,463 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\definecolor{darkred}{RGB}{139, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Haoming Wang's CV},
+    pdfauthor={Haoming Wang},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0 cm + 0.00001 cm}{0 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\newcommand{\placelastupdatedtext}{%
+  \AddToShipoutPictureFG*{%
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in May 2026}\hspace{\widthof{Last updated in May 2026}}
+    }}}%
+  }%
+}%
+
+\let\hrefWithoutArrow\href
+
+
+\begin{document}
+    \placelastupdatedtext
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Haoming Wang
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{334 N Craig, Pittsburgh, PA, USA}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:haw200@pitt.edu}{haw200@pitt.edu}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+14129097571}{412-909-7571}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \\
+        \mbox{\hrefWithoutArrow{https://haomingwang645.github.io/}{\textbf{Homepage}: haomingwang645.github.io}}%
+        \kern 5.0 pt%
+        \AND
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/haoming-wang-40a6a7239/}{Linkedin}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ\&hl=en}{Google Scholar}}%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    \section{Research Interests}
+        \begin{twocolentry}{}
+        { \textbf{Generative AI on Mobile Systems, Mobile Computing, Spatial Intelligence} }
+        \end{twocolentry}
+
+    \vspace{0.2 cm}
+
+    \section{Education}
+
+        \begin{twocolentry}{
+            \textbf{Sept 2022 -- May 2027 (Anticipated)}
+        }
+            \textbf{Ph.D. in Electrical and Computer Engineering}, University of Pittsburgh\end{twocolentry}
+
+        \vspace{-0.1 cm}
+        {Advisor: Prof. Wei Gao}
+        \vspace{0.2 cm}
+        \begin{twocolentry}{
+            Sept 2018 -- May 2022
+        }
+            \textbf{B.Eng. in Automation}, Zhejiang University\end{twocolentry}
+
+        \vspace{0.05 cm}
+        {with Honors from Chu Kochen Honors College\\}
+        {GPA: 3.8/4}
+
+    \section{Experience}
+
+        \begin{twocolentry}{
+            Sept 2022 -- Present
+        }
+            \textbf{Graduate Student Researcher}, Intelligent System Lab, University of Pittsburgh\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{(2025 May -- Now)} Enhanced VLM spatial reasoning by generating customizable 3D test scenes via LLM-based optimization and enabling on-device cross-frame reasoning. (CVPR'26 Oral, plus two papers under review)
+
+                \item \textbf{(2024 Nov -- 2025 May)} Developed methods for efficient and explainable on-device AI, including expediting LLM personalization via model selection and enhancing explainability.
+
+                \item \textbf{(2022 Sept -- 2024 Oct)} Designed novel Federated Learning frameworks to address intertwined data heterogeneity and device staleness using gradient inversion.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Sept 2024 -- Now
+        }
+            \textbf{Teaching Assistant}, Department of Electrical and Computer Engineering, University of Pittsburgh\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item ECE 1175 -- Embedded System Design (Fall 2024)
+                \item ECE 1195 -- Advanced Digital Design (Spring 2025)
+                \item ECE 1396 -- Introduction to Machine Learning (Fall 2025)
+                \item ECE 2570 -- Robotic Control (Spring 2026)
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Sept 2020 -- Jun 2022
+        }
+            \textbf{Research Assistant}, Department of Control Science and Technology, Zhejiang University\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Signal design and processing for near-ultrasonic acoustic sensing systems on smartphones.
+            \end{highlights}
+        \end{onecolentry}
+
+
+    \section{Selected Publications (First Author)}
+
+        \begin{samepage}
+
+            \begin{twocolentry}{
+                2026
+            }
+                \textbf{\textcolor{darkred}{[CVPR'26 Oral]} InfiniBench: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity}
+            \end{twocolentry}
+
+            \vspace{0.10 cm}
+
+            \begin{onecolentry}
+                \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Qiyao Xue}, \mbox{Wei Gao}
+
+                \vspace{0.10 cm}
+
+            {in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2026. (Acceptance Ratio: 25.4\%)}
+            \\ \hrefWithoutArrow{https://arxiv.org/abs/2511.18200}{[arXiv]}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2025
+            }
+                \textbf{\textcolor{darkred}{[MobiSys'25]} Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection}
+            \end{twocolentry}
+
+            \vspace{0.10 cm}
+
+            \begin{onecolentry}
+                \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Boyuan Yang}, \mbox{Xiangyu Yin}, \mbox{Wei Gao}
+
+                \vspace{0.10 cm}
+
+            {In Proceedings of the 23rd Annual International Conference on Mobile Systems, Applications and Services. (Acceptance Ratio: 18.0\%)}
+            \\ \hrefWithoutArrow{https://haomingwang645.github.io/pdfs/xpert_paper.pdf}{[Paper]}
+            \end{onecolentry}
+
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2025
+            }
+                \textbf{\textcolor{darkred}{[MobiCom'25]} When Device Delays Meet Data Heterogeneity in Federated AIoT Applications}
+            \end{twocolentry}
+
+            \vspace{0.10 cm}
+
+            \begin{onecolentry}
+                \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Wei Gao}
+
+                \vspace{0.10 cm}
+
+            {in Proceedings of the 31st ACM International Conference on Mobile Computing and Networking. (Acceptance Ratio: 17.1\%)}
+            \\ \hrefWithoutArrow{https://haomingwang645.github.io/pdfs/feddc_paper.pdf}{[Paper]}
+            \end{onecolentry}
+
+
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2025
+            }
+                \textbf{\textcolor{darkred}{[AAAI'25]} Tackling Intertwined Data and Device Heterogeneities in Federated Learning with Unlimited Staleness}
+            \end{twocolentry}
+
+            \vspace{0.10 cm}
+
+            \begin{onecolentry}
+                \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Wei Gao}
+
+                \vspace{0.10 cm}
+
+            {in Proceedings of the 39th Annual Conference on Artificial Intelligence, 2025. (Acceptance Ratio: 23.4\%)}
+            \\ \hrefWithoutArrow{https://haomingwang645.github.io/pdfs/aaai25_paper.pdf}{[Paper]} / \hrefWithoutArrow{https://arxiv.org/abs/2309.13536}{[arXiv]}
+            \end{onecolentry}
+
+        \end{samepage}
+
+
+    \section{Awards \& Honors}
+
+        \begin{twocolentry}{
+            April 2026
+        }
+            \textbf{ECE Research Assistant of the Year}, University of Pittsburgh\end{twocolentry}
+
+        \vspace{0.05 cm}
+        {Awarded by the Department of Electrical and Computer Engineering, recognized at the EGSO event.}
+
+
+   \section{Preprints \& Papers Under Review}
+
+        \begin{samepage}
+
+            \begin{twocolentry}{
+                2026
+            }
+                \textbf{Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Wei Gao}
+                \vspace{0.10 cm}
+                \\ \hrefWithoutArrow{https://haomingwang645.github.io/pdfs/arxiv26_vlm_latent_shaping.pdf}{[Paper]} / \hrefWithoutArrow{https://github.com/pittisl/vlm-latent-shaping}{[Code]} \textit{(Preprint)}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2026
+            }
+                \textbf{MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Qiyao Xue}, \mbox{Weichen Liu}, \mbox{Wei Gao}
+                \vspace{0.10 cm}
+                \\ \hrefWithoutArrow{https://www.arxiv.org/abs/2602.07082}{[arXiv:2602.07082]} \textit{(Under Review)}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2025
+            }
+                \textbf{Deciphering Personalization: Towards Fine-Grained Explainability in Natural Language for Personalized Image Generation Models}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Wei Gao}
+                \vspace{0.10 cm}
+                \\ \hrefWithoutArrow{https://haomingwang645.github.io/pdfs/finexl_paper.pdf}{[Paper]} \textit{(Under Review)}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2024
+            }
+                \textbf{FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{Kai Huang}, \mbox{\textbf{\textit{Haoming Wang (co-author)}}}, \mbox{Wei Gao}
+                \vspace{0.10 cm}
+                \\ \hrefWithoutArrow{https://haomingwang645.github.io/pdfs/freezeasguard_paper.pdf}{[Paper]}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2026
+            }
+                \textbf{HEVEN: Small Object Search and Navigation on VLM-Based Autonomous Mobile Systems}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{Anonymous Authors (incl.\ \textbf{\textit{Haoming Wang}}, 3rd author)}
+                \vspace{0.10 cm}
+                \\ \textit{(Double-Blind Under Review)}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2026
+            }
+                \textbf{GlobalNav: Daily Object Navigation in VLM-based Autonomous Mobile Systems with Aligned Local and Global Views}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{Anonymous Authors (incl.\ \textbf{\textit{Haoming Wang}}, 3rd author)}
+                \vspace{0.10 cm}
+                \\ \textit{(Double-Blind Under Review)}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2026
+            }
+                \textbf{Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{Qiyao Xue}, \mbox{Weichen Liu}, \mbox{Shiqi Wang}, \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Yuyang Wu}, \mbox{Wei Gao}
+                \vspace{0.10 cm}
+                \\ \hrefWithoutArrow{https://arxiv.org/abs/2512.02340}{[arXiv:2512.02340]} \textit{(Under Review)}
+            \end{onecolentry}
+
+            \vspace{0.3 cm}
+
+            \begin{twocolentry}{
+                2024
+            }
+                \textbf{Spatial Reasoning in Multimodal Large Language Models: A Survey of Tasks, Benchmarks and Methods}
+            \end{twocolentry}
+            \vspace{0.10 cm}
+            \begin{onecolentry}
+                \mbox{Weichen Liu}, \mbox{Qiyao Xue}, \mbox{\textbf{\textit{Haoming Wang}}}, \mbox{Xiangyu Yin}, \mbox{Boyuan Yang}, \mbox{Wei Gao}
+                \vspace{0.10 cm}
+                \\ \textit{(Under Review)}
+            \end{onecolentry}
+
+        \end{samepage}
+
+\end{document}

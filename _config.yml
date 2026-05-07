@@ -96,3 +96,4 @@ exclude:
   - todo.txt
   - _temp/index.html
   - _temp/
+  - cv_material/
