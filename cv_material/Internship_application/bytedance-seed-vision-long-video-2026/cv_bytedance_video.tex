@@ -1,0 +1,279 @@
+\documentclass[10pt, letterpaper]{article}
+
+% ===== Geometry & packages =====
+\usepackage[
+    ignoreheadfoot,
+    top=1.6cm, bottom=1.6cm, left=1.8cm, right=1.8cm,
+    footskip=1.0cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0,0,0}
+\definecolor{darkred}{RGB}{139,0,0}
+\definecolor{accent}{RGB}{30,55,120}
+\definecolor{themecolor}{RGB}{90,40,20}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Haoming Wang -- CV (ByteDance Seed Long-Range Video Generation)},
+    pdfauthor={Haoming Wang},
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large\color{themecolor}}{}{0pt}{}[\vspace{1pt}{\color{themecolor}\titlerule}]
+\titlespacing{\section}{-1pt}{0.28cm}{0.18cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[topsep=0.08cm,parsep=0.08cm,partopsep=0pt,itemsep=0pt,leftmargin=0cm + 10pt]
+}{\end{itemize}}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0cm + 0.00001cm}{0cm + 0.00001cm}
+}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5cm}
+    \begin{paracol}{2}
+}{\switchcolumn \raggedleft \secondColumn \end{paracol} \endonecolentry}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.4}
+}{\par\kern\topsep}
+
+\let\hrefWithoutArrow\href
+
+% ===== Document =====
+\begin{document}
+
+\newcommand{\AND}{\unskip\cleaders\copy\ANDbox\hskip\wd\ANDbox\ignorespaces}
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+
+\begin{header}
+    \fontsize{24pt}{24pt}\selectfont \textbf{Haoming Wang}
+
+    \vspace{4pt}
+    \normalsize
+    \mbox{Pittsburgh, PA, USA}\kern 5pt\AND\kern 5pt%
+    \mbox{\hrefWithoutArrow{mailto:haw200@pitt.edu}{haw200@pitt.edu}}\kern 5pt\AND\kern 5pt%
+    \mbox{\hrefWithoutArrow{tel:+14129097571}{(412) 909-7571}}
+    \\
+    \mbox{\hrefWithoutArrow{https://haomingwang645.github.io/}{\textbf{Homepage}}}\kern 5pt\AND\kern 5pt%
+    \mbox{\hrefWithoutArrow{https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ}{Google Scholar}}\kern 5pt\AND\kern 5pt%
+    \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/haoming-wang-40a6a7239/}{LinkedIn}}\kern 5pt\AND\kern 5pt%
+    \mbox{\hrefWithoutArrow{https://github.com/HaomingWang645}{GitHub}}
+\end{header}
+
+\vspace{2pt}
+
+% ===== Research Profile =====
+\section{Research Profile}
+\begin{onecolentry}
+PhD candidate (ECE, University of Pittsburgh) working on \textbf{multimodal generative models, video benchmark synthesis, and latent-representation shaping}. \textbf{First-authored CVPR'26 Oral} on a procedural \textbf{photo-realistic 3D video benchmark generator} that controllably renders egocentric scenes and establishes new evaluation protocols for spatiotemporal reasoning under compositional, relational, and observational complexity. Direct experience with \textbf{Stable Diffusion bilevel mask learning} (FreezeAsGuard), \textbf{training-free decomposition of diffusion / GAN / autoregressive image generators} (FineXL), \textbf{Dirichlet-energy latent regularization of VLMs}, and \textbf{cross-frame consistency under sequential observation budgets} (MosaicThinker) -- all immediately relevant to scalable long-range video generation, latent-structure design, drift mitigation, and perceptual evaluation.
+\end{onecolentry}
+
+% ===== Education =====
+\section{Education}
+
+\begin{twocolentry}{\textbf{Sept 2022 -- May 2027 (Anticipated)}}
+    \textbf{Ph.D., Electrical and Computer Engineering}, University of Pittsburgh
+\end{twocolentry}
+\vspace{-0.05cm}
+{Advisor: Prof.\ Wei Gao, Intelligent System Lab. Focus: multimodal generative / VL models, spatial reasoning, video benchmarks.}
+
+\vspace{0.18cm}
+
+\begin{twocolentry}{Sept 2018 -- May 2022}
+    \textbf{B.Eng., Automation}, Zhejiang University \hfill GPA 3.8/4.0
+\end{twocolentry}
+\vspace{-0.05cm}
+{Chu Kochen Honors College.}
+
+% ===== Selected Publications =====
+\section{Selected Publications -- Video Synthesis, Diffusion Models \& Latent Representations}
+
+\begin{twocolentry}{CVPR 2026}
+    \textcolor{darkred}{\textbf{[CVPR'26 Oral]}} \textbf{InfiniBench: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity}
+\end{twocolentry}
+\vspace{0.06cm}
+\begin{onecolentry}
+\underline{\textbf{\textit{Haoming Wang}}}, Qiyao Xue, Wei Gao. \textit{First author. Acceptance 25.4\%; selected for Oral.}\\
+\hrefWithoutArrow{https://arxiv.org/abs/2511.18200}{[arXiv:2511.18200]} \,\,
+\hrefWithoutArrow{https://github.com/pittisl/infinibench}{[Code]} \,\,
+\hrefWithoutArrow{https://huggingface.co/datasets/Haoming645/infinibench}{[Data]}
+\begin{highlights}
+    \item LLM-agent (Gemini-2.5-Pro) translates natural-language scene specifications into procedural constraints and refines them via a CoT feedback loop driven by BEV collision maps -- a controllable pipeline for synthesizing \textbf{photo-realistic egocentric videos} (Blender Cycles) with parameterized compositional, relational, and observational complexity.
+    \item Cluster-based layout optimizer (introducing a movable-cluster action space) and a \textbf{frontier-based task-aware camera trajectory planner} (Dijkstra over candidate viewpoints scored by validity / FoV / occlusion) generate consistent multi-second video sequences with controllable identity and layout -- directly transferable to long-range video generation evaluation.
+    \item Establishes a new \textbf{evaluation protocol} for video-based VLM reasoning across measurement / perspective-taking / spatiotemporal task families; outperforms LLM-based generators (I-Design, Holodeck, LayoutGPT) and procedural frameworks (Infinigen, Luminous) on prompt fidelity, CLIP alignment, realism, and physical plausibility -- the only method avoiding the fidelity-vs-plausibility tradeoff at high complexity.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.22cm}
+
+\begin{twocolentry}{2025 (Under Review)}
+    \textbf{Deciphering Personalization: Towards Fine-Grained Explainability in Natural Language for Personalized Image Generation Models (FineXL)}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+\underline{\textbf{\textit{Haoming Wang}}}, Wei Gao. \textit{First author.} \,\,
+\hrefWithoutArrow{https://haomingwang645.github.io/pdfs/finexl_paper.pdf}{[Paper]} \\
+{\small Training-free decomposition of CLIP-space divergence between base and personalized \textbf{SD v2.1 / v3.5, ControlGAN, Anole-7B autoregressive} generators into orthogonal VLM-discovered concepts; cuts single-aspect MAE \textbf{56\%}, multi-aspect selection error \textbf{$\geq$50\%}; introduces a mixed-proportion methodology for fine-grained perceptual evaluation of generative-model differences.}
+\end{onecolentry}
+
+\vspace{0.18cm}
+
+\begin{twocolentry}{2024 (Preprint)}
+    \textbf{FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+Kai Huang, \underline{\textbf{\textit{Haoming Wang}}} (co-author), Wei Gao. \,\,
+\hrefWithoutArrow{https://haomingwang645.github.io/pdfs/freezeasguard_paper.pdf}{[Paper]} \,\,
+\hrefWithoutArrow{https://github.com/pittisl/FreezeAsGuard}{[Code]} \\
+{\small \textbf{Bilevel optimization} over Stable Diffusion tensors via sigmoid mask relaxation -- a differentiable recipe for fine-grained manipulation of diffusion weights at scale; 37--47\% stronger mitigation than UCE / IMMA on portrait / artwork / NSFW; 48\% GPU memory and 21\% wall-clock savings.}
+\end{onecolentry}
+
+\vspace{0.18cm}
+
+\begin{twocolentry}{2026 (Preprint)}
+    \textbf{Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+\underline{\textbf{\textit{Haoming Wang}}}, Wei Gao. \textit{First author.} \,\,
+\hrefWithoutArrow{https://haomingwang645.github.io/pdfs/arxiv26_vlm_latent_shaping.pdf}{[Paper]} \,\,
+\hrefWithoutArrow{https://github.com/pittisl/vlm-latent-shaping}{[Code]} \\
+{\small Identify a VLM latent subspace aligned with \textbf{Laplacian eigenmaps} of the 3D scene graph; a \textbf{Dirichlet-energy regularizer} shapes this subspace at training, beating SFT by up to \textbf{12.1\%} -- a concrete instance of shaping hierarchical latent structure directly relevant to extended-generation latent design.}
+\end{onecolentry}
+
+% ===== Cross-Frame Video & Multi-View Reasoning =====
+\section{Cross-Frame Video \& Multi-View Reasoning}
+
+\begin{twocolentry}{2026 (Under Review)}
+    \textbf{MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+\underline{\textbf{\textit{Haoming Wang}}}, Qiyao Xue, Weichen Liu, Wei Gao. \textit{Co-first author.} \,\, \hrefWithoutArrow{https://www.arxiv.org/abs/2602.07082}{[arXiv:2602.07082]} \\
+{\small Operates on \textbf{RGB egocentric video}; \textbf{topology-aware MST cross-frame alignment} mitigates drift in sequential ICP-style chaining; \textbf{Gaussian-kernel iterative key-frame selection} as a sequential observation-budget policy (sister problem to chunked / autoregressive generation). Up to \textbf{40\%} accuracy gain on cross-frame VSI-Bench / Metro-Spatial-QA.}
+\end{onecolentry}
+
+\vspace{0.18cm}
+
+\begin{twocolentry}{2026 (Under Review)}
+    \textbf{ReMindView: Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+Qiyao Xue, \underline{\textbf{\textit{Haoming Wang}}} (co-author), Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao. \,\, \hrefWithoutArrow{https://arxiv.org/abs/2512.02340}{[arXiv:2512.02340]} \,\, \hrefWithoutArrow{https://github.com/pittisl/ReMindView-Bench}{[Code]} \\
+{\small Cognitively grounded multi-view benchmark (>50K VQAs); \textbf{linear-probe + entropy-dynamics} analysis on per-phase token logits separates correct vs.\ incorrect reasoning trajectories -- a candidate perceptual / coherence metric for assessing temporal consistency in generated video.}
+\end{onecolentry}
+
+% ===== Other First-Author Publications =====
+\section{Other First-Author Publications}
+
+\begin{twocolentry}{MobiSys 2025}
+    \textcolor{darkred}{\textbf{[MobiSys'25]}} Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+\underline{\textbf{\textit{Haoming Wang}}}, Boyuan Yang, Xiangyu Yin, Wei Gao. \textit{(18.0\% acceptance.)} \,\,
+\hrefWithoutArrow{https://haomingwang645.github.io/pdfs/xpert_paper.pdf}{[Paper]}
+\end{onecolentry}
+
+\vspace{0.14cm}
+
+\begin{twocolentry}{MobiCom 2025}
+    \textcolor{darkred}{\textbf{[MobiCom'25]}} When Device Delays Meet Data Heterogeneity in Federated AIoT Applications
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+\underline{\textbf{\textit{Haoming Wang}}}, Wei Gao. \textit{(17.1\% acceptance.)} \,\,
+\hrefWithoutArrow{https://haomingwang645.github.io/pdfs/feddc_paper.pdf}{[Paper]}
+\end{onecolentry}
+
+\vspace{0.14cm}
+
+\begin{twocolentry}{AAAI 2025}
+    \textcolor{darkred}{\textbf{[AAAI'25]}} Tackling Intertwined Data and Device Heterogeneities in Federated Learning with Unlimited Staleness
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+\underline{\textbf{\textit{Haoming Wang}}}, Wei Gao. \textit{(23.4\% acceptance.)} \,\,
+\hrefWithoutArrow{https://arxiv.org/abs/2309.13536}{[arXiv]}
+\end{onecolentry}
+
+\vspace{0.06cm}
+\begin{onecolentry}
+\textit{\small Co-authored: Spatial Reasoning Survey for VLMs (under review); HEVEN, GlobalNav -- VLM-based embodied navigation systems (3rd author, under review).}
+\end{onecolentry}
+
+% ===== Experience =====
+\section{Research Experience}
+
+\begin{twocolentry}{Sept 2022 -- Present}
+    \textbf{Graduate Student Researcher}, Intelligent System Lab, University of Pittsburgh
+\end{twocolentry}
+\vspace{0.06cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item \textbf{(May 2025 -- Present)} Procedural / LLM-agentic 3D video benchmark synthesis (CVPR'26 Oral); Dirichlet-energy latent shaping of VLM 3D-topology subspaces; cross-frame consistency under sequential observation budgets.
+    \item \textbf{(Nov 2024 -- May 2025)} Diffusion / generative-model interpretability and personalization: training-free fine-grained natural-language explanations of Stable Diffusion / GAN / autoregressive image generators (FineXL); on-device LLM personalization (Xpert).
+    \item \textbf{(Sept 2022 -- Oct 2024)} Federated learning systems with intertwined data and device heterogeneity (MobiCom'25, AAAI'25); large-scale distributed training pipelines.
+\end{highlights}
+\end{onecolentry}
+
+% ===== Awards =====
+\section{Awards \& Recognition}
+
+\begin{twocolentry}{April 2026}
+    \textbf{ECE Research Assistant of the Year}, University of Pittsburgh
+\end{twocolentry}
+\vspace{0.04cm}
+{\small Department of Electrical and Computer Engineering; recognized at the EGSO event.}
+
+% ===== Skills =====
+\section{Technical Skills}
+\begin{onecolentry}
+\textbf{Generative Models:} Stable Diffusion, ControlGAN, Anole-7B, CLIP variants; bilevel mask optimization, linear-representation decomposition, Laplacian-eigenmap latent probing.\\[2pt]
+\textbf{Video / 3D Pipelines:} Blender Cycles, Infinigen, Habitat, Isaac Sim, frontier-based camera planning, MatchAnything, DepthPro, SAM-3D / 3DGS.\\[2pt]
+\textbf{Programming:} Python, PyTorch, CUDA, Hugging Face, ONNX, TensorRT.
+\end{onecolentry}
+
+\end{document}

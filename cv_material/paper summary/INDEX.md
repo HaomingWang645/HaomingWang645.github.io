@@ -21,7 +21,7 @@ Source of truth for CV drafting. Each summary has: one-line pitch, problem, appr
 | FreezeAsGuard | arXiv preprint | 2024 | 2nd (co-author) | [arxiv-freezeasguard.md](not-first-author/arxiv-freezeasguard.md) |
 | GlobalNav | under review | 2026 | 3rd | [under-review-globalnav.md](not-first-author/under-review-globalnav.md) |
 | HEVEN | under review | 2026 | 3rd | [under-review-heven.md](not-first-author/under-review-heven.md) |
-| ReMindView (Reasoning Path) | under review | 2026 | 4th of 6 | [under-review-reasoning-path.md](not-first-author/under-review-reasoning-path.md) |
+| ReMindView (Reasoning Path) | under review | 2026 | 2nd (co-author) of 6 | [under-review-reasoning-path.md](not-first-author/under-review-reasoning-path.md) |
 
 ## Themes at a glance
 

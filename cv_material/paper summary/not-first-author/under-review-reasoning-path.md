@@ -4,8 +4,8 @@ short_name: ReMindView-Bench
 venue: Under Review
 year: 2026
 status: under review
-authorship: 4th author (of 6)
-authors: Qiyao Xue, Weichen Liu, Shiqi Wang, Haoming Wang, Yuyang Wu, Wei Gao
+authorship: 2nd author / co-author (of 6)
+authors: Qiyao Xue, Haoming Wang (co-author), Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao
 links: arXiv:2512.02340; https://huggingface.co/datasets/Xue0823/ReMindView-Bench; https://github.com/pittisl/ReMindView-Bench
 ---
 
@@ -26,9 +26,9 @@ The authors build ReMindView-Bench by procedurally generating diverse indoor sce
 - Linear probing shows cross-entropy loss rises monotonically across Stages 1-3 (and with model size), while entropy trajectories cleanly separate correct (low, tightly distributed) from incorrect (high, diffuse) reasoning paths - entropy acts as an effective proxy for spatial reasoning reliability.
 
 ## CV-ready bullets
-**Short (less than 15 words):** Co-authored (4th of 6) cognitively grounded multi-view spatial-reasoning benchmark and VLM latent-state analysis.
-**Medium (less than 30 words):** Co-authored (4th of 6, under review) ReMindView-Bench with >50K VQAs and a 4-phase cognitive analysis pipeline showing 15 VLMs plateau at 30-45% vs 81.5% human on multi-view spatial reasoning.
-**Long (less than 50 words, for research statement):** Co-authored (4th of 6, under review) ReMindView-Bench, a cognitively grounded multi-view spatial-reasoning benchmark (>50K VQAs across 5 room types, object-/view-centric patterns, 10 distance levels), and a paired explicit reasoning-path (LLM-as-judge, self-consistency) plus implicit latent-state (linear probing, entropy dynamics) analysis across 15 VLMs, diagnosing cross-view geometric misalignment as the dominant failure mode.
+**Short (less than 15 words):** Co-authored (2nd of 6, co-author) cognitively grounded multi-view spatial-reasoning benchmark and VLM latent-state analysis.
+**Medium (less than 30 words):** Co-authored (2nd of 6, co-author, under review) ReMindView-Bench with >50K VQAs and a 4-phase cognitive analysis pipeline showing 15 VLMs plateau at 30-45% vs 81.5% human on multi-view spatial reasoning.
+**Long (less than 50 words, for research statement):** Co-authored (2nd of 6, co-author, under review) ReMindView-Bench, a cognitively grounded multi-view spatial-reasoning benchmark (>50K VQAs across 5 room types, object-/view-centric patterns, 10 distance levels), and a paired explicit reasoning-path (LLM-as-judge, self-consistency) plus implicit latent-state (linear probing, entropy dynamics) analysis across 15 VLMs, diagnosing cross-view geometric misalignment as the dominant failure mode.
 
 ## Keywords / themes
 visual spatial reasoning, multi-view, VLM interpretability, cognitive science, mental models, reasoning path analysis, latent state probing, linear probing, entropy dynamics, LLM-as-a-judge, self-consistency, perspective taking, cross-view alignment, benchmark construction, Infinigen, Blender, VQA
