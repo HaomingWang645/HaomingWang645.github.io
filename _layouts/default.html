@@ -280,7 +280,7 @@
         {% assign other_posts = site.posts | where: "categories", "others" %}
         {% if other_posts.size > 0 %}
         <h2><a id="others" style="color: inherit">other</a></h2>
-        <div class="publications">
+        <div class="publications others-section">
           <ol class="bibliography">
             {% for post in other_posts %}
             {% if post.status == 'under-review' %}{% assign other_badge = 'under review' %}{% assign other_periodical = 'under review' %}{% else %}{% assign other_badge = 'note' %}{% assign other_periodical = 'technical report' %}{% endif %}
