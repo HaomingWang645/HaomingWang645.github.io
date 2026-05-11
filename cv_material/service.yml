@@ -1,0 +1,15 @@
+# Service & professional activities
+# Stored locally — NOT currently rendered on the public homepage.
+# Once this list grows, wire a "service" section into _layouts/default.html that
+# reads from _data/service.yml (move this file there to activate it).
+
+journal_reviewer:
+  - venue: "ACM Transactions on Internet of Things (TIOT)"
+    year_started: 2026
+
+conference_reviewer: []
+
+tpc:
+  - venue: "ACM S3 2026 (Smart Sensing for Systems and Services Workshop)"
+    year: 2026
+    url: "https://s3-workshop.neslab.it/"

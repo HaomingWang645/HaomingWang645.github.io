@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "TPC member of ACM S3 2026"
+date:   2026-05-10 00:00:00 +00:00
+categories: news_item
+author: "Haoming Wang"
+news_text: 'I will be serving as TPC member of the <strong>ACM S3 2026</strong> workshop.'
+news_link: 'https://s3-workshop.neslab.it/'
+
+---
