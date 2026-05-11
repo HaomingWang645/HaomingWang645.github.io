@@ -2,6 +2,7 @@
 layout: post
 title:  "GlobalNav: Daily Object Navigation in VLM-based Autonomous Mobile Systems with Aligned Local and Global Views"
 date:   2026-03-01 00:00:01 +00:00
+image: /paper_images/globalnav.png
 categories: others
 status: under-review
 author: "Haoming Wang"

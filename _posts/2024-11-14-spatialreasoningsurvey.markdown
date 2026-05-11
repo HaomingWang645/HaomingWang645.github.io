@@ -2,6 +2,7 @@
 layout: post
 title:  "Spatial Reasoning in Multimodal Large Language Models: A Survey of Tasks, Benchmarks and Methods"
 date:   2024-11-14 22:21:59 +00:00
+image: /paper_images/survey.png
 categories: others
 author: "Haoming Wang"
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective"
 date:   2025-12-02 00:00:00 +00:00
+image: /paper_images/reasoning-path.png
 categories: others
 author: "Haoming Wang"
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "HEVEN: Small Object Search and Navigation on VLM-Based Autonomous Mobile Systems"
 date:   2026-03-01 00:00:00 +00:00
+image: /paper_images/heven.png
 categories: others
 status: under-review
 author: "Haoming Wang"
