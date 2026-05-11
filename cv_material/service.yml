@@ -10,6 +10,6 @@ journal_reviewer:
 conference_reviewer: []
 
 tpc:
-  - venue: "ACM S3 2026 (Smart Sensing for Systems and Services Workshop)"
+  - venue: "ACM S3 2026 Workshop"
     year: 2026
     url: "https://s3-workshop.neslab.it/"
