@@ -84,6 +84,14 @@
           </p>
 
           <p>Contact: <strong>haw200 AT pitt.edu</strong></p>
+
+          <div class="exp-keywords bio-keywords">
+            <span class="exp-label">Research interests:</span>
+            <span class="exp-tag">Spatial Intelligence</span>
+            <span class="exp-tag">Multimodal LLM</span>
+            <span class="exp-tag">LLM Reasoning</span>
+            <span class="exp-tag">Generative AI on Mobile Devices</span>
+          </div>
         </div>
 
         <!-- Social icons -->
@@ -98,6 +106,11 @@
             <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}/" title="LinkedIn" target="_blank">
               <img src="{{ site.baseurl }}/images/icons/linkedin.svg" alt="LinkedIn">
             </a>
+            {% if site.footer-links.github %}
+            <a href="https://github.com/{{ site.footer-links.github }}" title="GitHub" target="_blank">
+              <img src="{{ site.baseurl }}/images/icons/github.svg" alt="GitHub">
+            </a>
+            {% endif %}
             {% if site.footer-links.instagram %}
             <a href="https://www.instagram.com/{{ site.footer-links.instagram }}/" title="Instagram" target="_blank">
               <img src="{{ site.baseurl }}/images/icons/instagram.svg" alt="Instagram">
@@ -318,7 +331,16 @@
         <h2><a id="experience" style="color: inherit">experience</a></h2>
         <div class="experience">
           <div class="exp-item">
-            <div class="exp-period">Sept 2024 &mdash; Present</div>
+            <div class="exp-body">
+              <div class="exp-role"><strong>Service</strong></div>
+              <ul class="exp-list">
+                <li>Reviewer, <em>ACM Transactions on Internet of Things</em> (TIOT)</li>
+                <li>TPC Member, <a href="https://s3-workshop.neslab.it/" target="_blank">ACM S3 2026 Workshop</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
             <div class="exp-body">
               <div class="exp-role"><strong>Teaching Assistant</strong>, Department of Electrical and Computer Engineering, University of Pittsburgh</div>
               <ul class="exp-list">
@@ -328,21 +350,6 @@
                 <li>ECE 2570 &mdash; Robotic Control (Spring 2026)</li>
               </ul>
             </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-period">Sept 2020 &mdash; Jun 2022</div>
-            <div class="exp-body">
-              <div class="exp-role"><strong>Research Assistant</strong>, Department of Control Science and Engineering, Zhejiang University</div>
-              <div class="exp-detail">Signal design and processing for near-ultrasonic acoustic sensing systems on smartphones.</div>
-            </div>
-          </div>
-
-          <div class="exp-keywords">
-            <span class="exp-label">Research interests:</span>
-            <span class="exp-tag">Generative AI on Mobile Systems</span>
-            <span class="exp-tag">Mobile Computing</span>
-            <span class="exp-tag">Spatial Intelligence</span>
           </div>
         </div>
 
