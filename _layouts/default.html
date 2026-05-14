@@ -54,63 +54,63 @@
       <article>
 
         <!-- Profile + bio -->
-        <div class="profile float-right">
-          <figure>
-            <img src="{{ site.baseurl }}/{{ site.avatar }}" class="img-fluid z-depth-1 rounded" alt="profile photo" loading="eager">
-          </figure>
-          <div class="more-info">
-            <p>US, Pennsylvania, Pittsburgh</p>
+        <div class="intro-row">
+          <div class="intro-text">
+            <p>
+              Hi! I'm Haoming Wang, a PhD student at the
+              <a href="http://www.engineering.pitt.edu/Departments/Electrical-Computer/" target="_blank">Department of Electrical and Computer Engineering</a>
+              at the <a href="http://www.pitt.edu/" target="_blank"><strong>University of Pittsburgh</strong></a>, working in the
+              <a href="https://pittisl.github.io/" target="_blank">Intelligent System Lab</a> advised by
+              <a href="https://sites.pitt.edu/~weigao/" target="_blank">Prof. Wei Gao</a>.
+              I previously earned my bachelor's degree in Automation from the Department of Control Science and Engineering at <strong>Zhejiang University</strong>, with honors from the Chu Kochen Honors College.
+            </p>
+
+            <p>
+              My research centers on <strong>spatial intelligence</strong>, <strong>multimodal LLMs</strong>,
+              <strong>LLM reasoning</strong>, and <strong>generative AI on mobile devices</strong>.
+              I am also interested in LLM explainability and robotics.
+            </p>
+
+            <div class="callout-banner internship-banner">
+              <span class="callout-icon">🎯</span>
+              <span class="callout-text">
+                I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong> &mdash; <em>let's chat!</em>
+              </span>
+            </div>
+
+            <div class="social">
+              <div class="contact-icons">
+                <a href="mailto:{{ site.footer-links.email }}" title="Email">
+                  <img src="{{ site.baseurl }}/images/icons/gmail.svg" alt="Email">
+                </a>
+                <a href="https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ&hl=en" title="Google Scholar" target="_blank">
+                  <img src="{{ site.baseurl }}/images/icons/googlescholar.svg" alt="Google Scholar">
+                </a>
+                <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}/" title="LinkedIn" target="_blank">
+                  <img src="{{ site.baseurl }}/images/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                {% if site.footer-links.github %}
+                <a href="https://github.com/{{ site.footer-links.github }}" title="GitHub" target="_blank">
+                  <img src="{{ site.baseurl }}/images/icons/github.svg" alt="GitHub">
+                </a>
+                {% endif %}
+                {% if site.footer-links.instagram %}
+                <a href="https://www.instagram.com/{{ site.footer-links.instagram }}/" title="Instagram" target="_blank">
+                  <img src="{{ site.baseurl }}/images/icons/instagram.svg" alt="Instagram">
+                </a>
+                {% endif %}
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="clearfix">
-          <p>
-            Hi! I'm Haoming Wang, a PhD student at the
-            <a href="http://www.engineering.pitt.edu/Departments/Electrical-Computer/" target="_blank">Department of Electrical and Computer Engineering</a>
-            at the <a href="http://www.pitt.edu/" target="_blank"><strong>University of Pittsburgh</strong></a>, working in the
-            <a href="https://pittisl.github.io/" target="_blank">Intelligent System Lab</a> advised by
-            <a href="https://sites.pitt.edu/~weigao/" target="_blank">Prof. Wei Gao</a>.
-            I previously earned my bachelor's degree in Automation from the Department of Control Science and Engineering at <strong>Zhejiang University</strong>, with honors from the Chu Kochen Honors College.
-          </p>
-
-          <p>
-            My research centers on <strong>spatial intelligence</strong>, <strong>multimodal LLMs</strong>,
-            <strong>LLM reasoning</strong>, and <strong>generative AI on mobile devices</strong>.
-            I am also interested in LLM explainability and robotics.
-          </p>
-
-          <div class="callout-banner internship-banner">
-            <span class="callout-icon">🎯</span>
-            <span class="callout-text">
-              I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong> &mdash; <em>let's chat!</em>
-            </span>
-          </div>
-        </div>
-
-        <!-- Social icons -->
-        <div class="social">
-          <div class="contact-icons">
-            <a href="mailto:{{ site.footer-links.email }}" title="Email">
-              <img src="{{ site.baseurl }}/images/icons/gmail.svg" alt="Email">
-            </a>
-            <a href="https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ&hl=en" title="Google Scholar" target="_blank">
-              <img src="{{ site.baseurl }}/images/icons/googlescholar.svg" alt="Google Scholar">
-            </a>
-            <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}/" title="LinkedIn" target="_blank">
-              <img src="{{ site.baseurl }}/images/icons/linkedin.svg" alt="LinkedIn">
-            </a>
-            {% if site.footer-links.github %}
-            <a href="https://github.com/{{ site.footer-links.github }}" title="GitHub" target="_blank">
-              <img src="{{ site.baseurl }}/images/icons/github.svg" alt="GitHub">
-            </a>
-            {% endif %}
-            {% if site.footer-links.instagram %}
-            <a href="https://www.instagram.com/{{ site.footer-links.instagram }}/" title="Instagram" target="_blank">
-              <img src="{{ site.baseurl }}/images/icons/instagram.svg" alt="Instagram">
-            </a>
-            {% endif %}
-          </div>
-          <div class="contact-note"></div>
+          <aside class="profile">
+            <figure>
+              <img src="{{ site.baseurl }}/{{ site.avatar }}" class="img-fluid z-depth-1 rounded" alt="profile photo" loading="eager">
+            </figure>
+            <div class="more-info">
+              <p>US, Pennsylvania, Pittsburgh</p>
+            </div>
+          </aside>
         </div>
 
         {% if site.data.conferences and site.data.conferences.size > 0 %}

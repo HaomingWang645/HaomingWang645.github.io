@@ -127,11 +127,29 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.01em;
 }
 
+// ===== Intro row (bio + profile, two-column flex) =====
+.intro-row {
+  display: flex;
+  gap: 2.75rem;
+  align-items: flex-start;
+  margin: 0 0 2rem;
+}
+.intro-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.intro-text p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
 // ===== Profile =====
 .profile {
-  width: 320px;
-  max-width: 32vw;
-  margin: 0 0 1.5rem 2rem;
+  flex: 0 0 300px;
+  width: 300px;
+  max-width: 300px;
+  margin: 0;
 }
 .profile figure { margin: 0; }
 .profile img {
@@ -148,25 +166,27 @@ h1, h2, h3, h4, h5, h6 {
 .profile .more-info {
   margin-top: 0.7rem;
   font-family: 'Roboto Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: $body-color;
   text-align: center;
   letter-spacing: 0.01em;
 }
 .profile .more-info p { margin: 0; }
 
-@media (max-width: 575px) {
+@media (max-width: 720px) {
+  .intro-row {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
   .profile {
-    width: 60vw; max-width: 60vw;
-    float: none !important;
-    margin: 0 auto 1.5rem;
+    flex: 0 0 auto;
+    width: 62vw;
+    max-width: 280px;
+    margin: 0 auto;
   }
   .post-title { font-size: 3rem; }
 }
-
-// Bio paragraph spacing
-.clearfix p { margin-bottom: 1rem; font-size: 1.05rem; line-height: 1.7; }
-.clearfix p:last-child { margin-bottom: 0; }
 
 // ===== Section headings =====
 h2 {
@@ -248,8 +268,8 @@ h2 a:hover { color: $accent; }
 .travel-text strong { color: $accent; font-weight: 700; }
 .callout-text em,
 .travel-text em { font-style: italic; color: $body-color; }
-.travel-banner { margin: 2rem 0 1rem; }
-.internship-banner { margin: 1rem 0 0.5rem; }
+.travel-banner { margin: 1.5rem 0; }
+.internship-banner { margin: 1.25rem 0 0; }
 
 // Notes page section headings (within the combined notes/blog/reading page)
 .notes-section { margin: 2rem 0 2.5rem; }
@@ -937,18 +957,18 @@ h2 a:hover { color: $accent; }
 
 // ===== Social icons =====
 .social {
-  margin: 2rem 0 0.5rem;
+  margin: 1.25rem 0 0;
   text-align: left;
 }
 .contact-icons {
   display: inline-flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .contact-icons a {
   display: inline-flex;
-  width: 3.4rem; height: 3.4rem;
+  width: 2.9rem; height: 2.9rem;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -959,8 +979,8 @@ h2 a:hover { color: $accent; }
   overflow: hidden;
 }
 .contact-icons a img {
-  width: 1.85rem;
-  height: 1.85rem;
+  width: 1.55rem;
+  height: 1.55rem;
   display: block;
   transition: transform 0.2s ease;
 }
