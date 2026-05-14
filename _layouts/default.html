@@ -74,23 +74,16 @@
           </p>
 
           <p>
-            My research centers on <strong>multimodal large language models for spatial reasoning</strong> and
-            <strong>on-device deployment</strong>. I am also interested in explainability and resource-aware personalization.
+            My research centers on <strong>spatial intelligence</strong>, <strong>multimodal LLMs</strong>,
+            <strong>LLM reasoning</strong>, and <strong>generative AI on mobile devices</strong>.
+            I am also interested in LLM explainability and robotics.
           </p>
 
-          <p>
-            I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong>.
-            I welcome any inquiries to connect.
-          </p>
-
-          <p>Contact: <strong>haw200 AT pitt.edu</strong></p>
-
-          <div class="exp-keywords bio-keywords">
-            <span class="exp-label">Research interests:</span>
-            <span class="exp-tag">Spatial Intelligence</span>
-            <span class="exp-tag">Multimodal LLM</span>
-            <span class="exp-tag">LLM Reasoning</span>
-            <span class="exp-tag">Generative AI on Mobile Devices</span>
+          <div class="callout-banner internship-banner">
+            <span class="callout-icon">🎯</span>
+            <span class="callout-text">
+              I am on track to graduate in 2027 and am actively <strong>seeking research internship opportunities</strong> &mdash; <em>let's chat!</em>
+            </span>
           </div>
         </div>
 
@@ -119,6 +112,17 @@
           </div>
           <div class="contact-note"></div>
         </div>
+
+        {% if site.data.conferences and site.data.conferences.size > 0 %}
+        <div class="travel-banner">
+          <span class="travel-icon">📍</span>
+          <span class="travel-text">
+            I'll be at
+            {% for c in site.data.conferences %}{% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}{% if c.url %}<a href="{{ c.url }}" target="_blank"><strong>{{ c.name }}</strong></a>{% else %}<strong>{{ c.name }}</strong>{% endif %}{% if c.location or c.dates %} ({% if c.location %}{{ c.location }}{% endif %}{% if c.location and c.dates %}, {% endif %}{% if c.dates %}{{ c.dates }}{% endif %}){% endif %}{% endfor %}
+            &mdash; <em>let's chat!</em>
+          </span>
+        </div>
+        {% endif %}
 
         <!-- News -->
         <h2><a href="#news" id="news" style="color: inherit">news</a></h2>
@@ -151,6 +155,9 @@
               {% endfor %}
             </table>
           </div>
+          {% if news_combined.size > 8 %}
+          <p class="news-more"><a href="{{ site.baseurl }}/news/">see all news &rarr;</a></p>
+          {% endif %}
         </div>
 
         <!-- Recent / highlighted projects -->

@@ -1,0 +1,12 @@
+# Upcoming conferences Haoming will attend.
+# Rendered as a single callout line above the news section.
+# Format on the page: "<name> (<location>, <dates>)"
+# Update the date strings with the exact ranges once announced.
+
+- name: MLSys 26
+  location: Seattle
+  dates: May 18-22
+
+- name: CVPR 26
+  location: Denver
+  dates: Jun 11-15

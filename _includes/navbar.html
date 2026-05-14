@@ -16,8 +16,11 @@
             <li class="nav-item{% if page.url == '/' %} active-anchor{% endif %}">
               <a class="nav-link" href="{{ site.baseurl }}/#publications">publications</a>
             </li>
+            <li class="nav-item{% if page.url contains '/notes' %} active{% endif %}">
+              <a class="nav-link" href="{{ site.baseurl }}/notes/">notes</a>
+            </li>
             <li class="nav-item{% if page.url contains '/about-me' %} active{% endif %}">
-              <a class="nav-link" href="{{ site.baseurl }}/about-me/">about me</a>
+              <a class="nav-link" href="{{ site.baseurl }}/about-me/">more about me</a>
             </li>
             <li class="nav-item">
               {% assign latest_cv = '' %}
