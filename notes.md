@@ -22,7 +22,15 @@ permalink: /notes/
 
 <section class="notes-section">
   <h2 class="notes-h2">reading list</h2>
-  <div class="empty-page-stub">
-    <p>Curating &mdash; coming soon.</p>
-  </div>
+
+  <ul class="post-list">
+    <li class="post-list-item">
+      <a href="{{ site.baseurl }}/notes/spatial-latent-reasoning/" class="post-list-link">
+        <span class="post-list-date">May 13, 2026</span>
+        <h3 class="post-list-title">Spatial latent reasoning — a reading map</h3>
+        <span class="post-list-tags">reading list · spatial reasoning · latent reasoning · VLMs</span>
+      </a>
+    </li>
+  </ul>
+
 </section>
