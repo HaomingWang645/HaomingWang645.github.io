@@ -16,7 +16,7 @@
 \definecolor{accent}{RGB}{30,55,120}
 
 \hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent,
-  pdftitle={Haoming Wang -- CV (ByteDance Seed Long-Range Video Generation)}, pdfauthor={Haoming Wang}}
+  pdftitle={Haoming Wang -- CV (Qualcomm @ CVPR 2026)}, pdfauthor={Haoming Wang}}
 
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
@@ -54,7 +54,8 @@
 \begin{minipage}[t]{0.58\linewidth}
   \vspace{0pt}
   {\fontsize{24pt}{26pt}\selectfont \textbf{HAOMING WANG}}\\[2pt]
-  {\scshape\normalsize Ph.D.\ Candidate}
+  {\scshape\normalsize Ph.D.\ Candidate}\\[2pt]
+  {\small \textit{Presenting CVPR'26 \textcolor{darkred}{Oral} -- InfiniBench -- in Denver, June 5--7. Happy to meet at Booth 429.}}
 \end{minipage}%
 \begin{minipage}[t]{0.42\linewidth}
   \vspace{0pt}
@@ -66,7 +67,7 @@
 \end{minipage}
 
 \section{Research Interests}
-Video Benchmark Synthesis \& Evaluation, Diffusion / Generative Image \& Video Models, Latent-Representation Shaping for VLMs, Cross-Frame Temporal Consistency.
+On-Device Multimodal AI, Computer Vision, Vision-Language Models, Robotics \& Autonomous Mobile Systems, Generative-Model Interpretability.
 
 \section{Education}
 
@@ -88,8 +89,8 @@ Chu Kochen Honors College
 \textbf{Graduate Student Researcher}\\
 Intelligent System Lab, University of Pittsburgh, Pittsburgh, PA, USA
 \begin{itemize}[leftmargin=1.1em, itemsep=2pt, topsep=3pt]
-  \item \textbf{(May 2025 -- Present)} Led research on procedural / LLM-agentic 3D video benchmark synthesis (CVPR'26 Oral); Dirichlet-energy latent shaping of VLM 3D-topology subspaces; cross-frame consistency under sequential observation budgets.
-  \item \textbf{(Nov 2024 -- May 2025)} Drove research on diffusion / generative-model interpretability and personalization: training-free fine-grained natural-language explanations of Stable Diffusion / GAN / autoregressive image generators (FineXL); explainable on-device LLM personalization (MobiSys'25 Xpert).
+  \item \textbf{(May 2025 -- Present)} Led on-device VLM and computer-vision research: photo-realistic 3D benchmark synthesis (CVPR'26 Oral); on-device cross-frame reasoning deployed on Jetson Orin / Meta AR Glass / smartphone; co-developed VLM-based autonomous mobile systems on quadruped and wheeled robots.
+  \item \textbf{(Nov 2024 -- May 2025)} Drove on-device LLM personalization (MobiSys'25 Xpert) and training-free fine-grained interpretability for diffusion / GAN / autoregressive image generators (FineXL).
   \item \textbf{(Sept 2022 -- Oct 2024)} Designed federated learning systems for heterogeneous AIoT fleets: gradient correction under data / device heterogeneity (MobiCom'25); federated learning with unbounded device staleness (AAAI'25).
 \end{itemize}
 \end{datedentry}
@@ -100,12 +101,12 @@ Intelligent System Lab, University of Pittsburgh, Pittsburgh, PA, USA
 \item \textbf{\textcolor{darkred}{[CVPR'26 Oral]}\ InfiniBench: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity}\\
 \me, Qiyao Xue, Wei Gao.\\
 \textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2026 (Acceptance 25.4\%, Oral). \href{https://arxiv.org/abs/2511.18200}{[arXiv]}\,\href{https://github.com/pittisl/infinibench}{[Code]}\,\href{https://huggingface.co/datasets/Haoming645/infinibench}{[Data]}
-\impactbullet{\textbf{Architected} a customizable framework that turns plain-language scene descriptions into photo-realistic 3D walk-through videos (Blender Cycles) with controllable identity and layout; established a new evaluation protocol for video-based reasoning -- a transferable methodology for long-video quality assessment.}
+\impactbullet{\textbf{Architected} a customizable framework for analyzing VLM spatial reasoning that generates an unlimited supply of photo-realistic 3D test scenes with user-controllable axes for object count, clutter, occlusion, and viewpoint.}
 
 \item \textbf{\textcolor{darkred}{[MobiSys'25]}\ Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection}\\
 \me, Boyuan Yang, Xiangyu Yin, Wei Gao.\\
 \textit{Proceedings of the 23rd ACM International Conference on Mobile Systems, Applications and Services (MobiSys)}, 2025 (Acceptance 18.0\%). \href{https://haomingwang645.github.io/pdfs/xpert_paper.pdf}{[Paper]}
-\impactbullet{\textbf{Developed Xpert}, an explainable model-selection method warm-starting on-device LLM personalization from the closest pre-personalized checkpoint.}
+\impactbullet{\textbf{Developed Xpert}, an explainable model-selection method that warm-starts on-device LLM personalization from the closest pre-personalized checkpoint of a similar past user, eliminating cold-start cost on edge hardware.}
 
 \item \textbf{\textcolor{darkred}{[MobiCom'25]}\ When Device Delays Meet Data Heterogeneity in Federated AIoT Applications}\\
 \me, Wei Gao.\\
@@ -115,45 +116,46 @@ Intelligent System Lab, University of Pittsburgh, Pittsburgh, PA, USA
 \item \textbf{\textcolor{darkred}{[AAAI'25]}\ Tackling Intertwined Data and Device Heterogeneities in Federated Learning with Unlimited Staleness}\\
 \me, Wei Gao.\\
 \textit{Proceedings of the 39th AAAI Conference on Artificial Intelligence}, 2025 (Acceptance 23.4\%). \href{https://arxiv.org/abs/2309.13536}{[arXiv]}
-\impactbullet{\textbf{Designed} a gradient-inversion technique that recovers usable training signal from arbitrarily stale device updates, enabling FL to converge on real heterogeneous fleets.}
+\impactbullet{\textbf{Designed} a gradient-inversion technique that recovers usable training signal from arbitrarily stale device updates, enabling FL to converge on real heterogeneous mobile / IoT fleets.}
 \end{publist}
 
 \section{Preprints \& Papers Under Review}
 
 \begin{publist}
-\item \textbf{Deciphering Personalization: Towards Fine-Grained Explainability in Natural Language for Personalized Image Generation Models (FineXL)}\\
-\me, Wei Gao.\\
-\textit{Under Review}, 2025. \href{https://haomingwang645.github.io/pdfs/finexl_paper.pdf}{[Paper]}
-\impactbullet{\textbf{Architected FineXL}, a training-free method decomposing a personalized image generator's divergence from its base into orthogonal natural-language concepts; cut single-aspect explanation error by 56\% across \textbf{diffusion, GAN, and autoregressive} generators -- a new methodology for fine-grained perceptual evaluation of generative-model differences.}
-
-\item \textbf{FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing}\\
-Kai Huang, \meco, Wei Gao.\\
-\textit{Preprint}, 2024. \href{https://haomingwang645.github.io/pdfs/freezeasguard_paper.pdf}{[Paper]}\,\href{https://github.com/pittisl/FreezeAsGuard}{[Code]}
-\impactbullet{\textbf{Co-developed} a bilevel-optimization defense that learns a tensor-freezing mask over Stable Diffusion -- a clean differentiable recipe for fine-grained manipulation of diffusion weights at scale; 37--47\% stronger mitigation than unlearning baselines.}
+\item \textbf{MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation}\\
+\me, Qiyao Xue, Weichen Liu, Wei Gao.\\
+\textit{Under Review}, 2026. \href{https://www.arxiv.org/abs/2602.07082}{[arXiv]}
+\impactbullet{\textbf{Built} a training-free pipeline that stitches multi-view RGB frames into a compact semantic map, boosting small on-device VLMs' cross-frame spatial reasoning by up to 40\%; deployed on Jetson Orin, Meta AR Glass, and smartphone.}
 
 \item \textbf{Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models}\\
 \me, Wei Gao.\\
 \textit{Preprint}, 2026. \href{https://haomingwang645.github.io/pdfs/arxiv26_vlm_latent_shaping.pdf}{[Paper]}\,\href{https://github.com/pittisl/vlm-latent-shaping}{[Code]}
-\impactbullet{\textbf{Discovered} a VLM latent subspace encoding 3D scene topology and \textbf{introduced} a Dirichlet-energy regularizer beating SFT by up to 12.1\% -- a concrete instance of shaping hierarchical latent structure relevant to extended-generation latent design.}
+\impactbullet{\textbf{Discovered} a VLM latent subspace encoding 3D scene topology and \textbf{introduced} a Dirichlet-energy regularizer that improves real-world spatial reasoning by up to 12.1\% over standard SFT.}
 
-\item \textbf{MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation}\\
-\me, Qiyao Xue, Weichen Liu, Wei Gao.\\
-\textit{Under Review}, 2026. \href{https://www.arxiv.org/abs/2602.07082}{[arXiv]}
-\impactbullet{\textbf{Built} a training-free pipeline that stitches multi-view first-person video frames into a compact semantic map; replaced drift-prone sequential alignment with an MST routing scheme anchoring every frame to a global reference -- a transferable idea for long-horizon temporal consistency.}
+\item \textbf{HEVEN: Small Object Search and Navigation on VLM-Based Autonomous Mobile Systems}\\
+Anonymous Authors (incl.\ \meanon, 3rd author).\\
+\textit{Double-Blind Under Review}, 2026.
+\impactbullet{\textbf{Co-architected} the first VLM-based mobile system for small-object search, with a hierarchical spatial semantic tree and Tree-of-Thought planner; achieved 73.86\% success rate (3$\times$ over SOTA) on a real quadruped robot.}
+
+\item \textbf{GlobalNav: Daily Object Navigation in VLM-Based Autonomous Mobile Systems with Aligned Local and Global Views}\\
+Anonymous Authors (incl.\ \meanon, 3rd author).\\
+\textit{Double-Blind Under Review}, 2026.
+\impactbullet{\textbf{Co-developed} an infrastructure-assisted VLM navigation system aligning ceiling-camera global views with the robot's first-person view; lifted daily-object navigation success from <30\% to 90.91\% in simulation, $\sim$85\% on a real wheeled robot.}
+
+\item \textbf{Deciphering Personalization: Towards Fine-Grained Explainability in Natural Language for Personalized Image Generation Models (FineXL)}\\
+\me, Wei Gao.\\
+\textit{Under Review}, 2025. \href{https://haomingwang645.github.io/pdfs/finexl_paper.pdf}{[Paper]}
+\impactbullet{\textbf{Architected FineXL}, a training-free method decomposing a personalized image generator's divergence from its base into orthogonal natural-language concepts with quantitative scores; cut explanation error by 56\%.}
+
+\item \textbf{FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing}\\
+Kai Huang, \meco, Wei Gao.\\
+\textit{Preprint}, 2024. \href{https://haomingwang645.github.io/pdfs/freezeasguard_paper.pdf}{[Paper]}\,\href{https://github.com/pittisl/FreezeAsGuard}{[Code]}
+\impactbullet{\textbf{Co-developed} a bilevel-optimization defense that learns which diffusion-model tensors to lock so users cannot fine-tune toward illegal content; 37--47\% stronger mitigation than unlearning baselines.}
 
 \item \textbf{Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective}\\
 Qiyao Xue, \meco, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao.\\
 \textit{Under Review}, 2026. \href{https://arxiv.org/abs/2512.02340}{[arXiv]}
-\impactbullet{\textbf{Co-authored} ReMindView-Bench (50K+ VQAs across 15 VLMs); demonstrated internal uncertainty cleanly separates correct vs.\ incorrect reasoning trajectories -- a candidate perceptual / coherence metric for assessing temporal consistency in generated video.}
-
-\item \textbf{HEVEN \& GlobalNav (VLM-based autonomous mobile systems)}\\
-Anonymous Authors (incl.\ \meanon, 3rd author).\\
-\textit{Double-Blind Under Review}, 2026.
-\impactbullet{\textbf{Co-authored} two VLM-based mobile systems: HEVEN (hierarchical spatial semantic tree + Tree-of-Thought planner; 73.86\% success on a real quadruped) and GlobalNav (infrastructure-assisted navigation, 90.91\% success in simulation).}
-
-\item \textbf{Spatial Reasoning in Multimodal Large Language Models: A Survey of Tasks, Benchmarks and Methods}\\
-Weichen Liu, Qiyao Xue, \me, Xiangyu Yin, Boyuan Yang, Wei Gao.\\
-\textit{Under Review}, 2026.
+\impactbullet{\textbf{Co-authored} ReMindView-Bench, a cognitively grounded multi-view spatial-reasoning benchmark (50K+ VQAs across 15 VLMs).}
 \end{publist}
 
 \section{Honors \& Awards}
@@ -164,8 +166,8 @@ Department of Electrical and Computer Engineering, University of Pittsburgh
 \end{datedentry}
 
 \section{Technical Skills}
-\textbf{Generative Models:} Stable Diffusion, ControlGAN, Anole-7B, CLIP / FG-CLIP; bilevel mask optimization, linear-representation decomposition, Laplacian-eigenmap latent probing.\\[2pt]
-\textbf{Video / 3D Pipelines:} Blender Cycles, Infinigen, Habitat, Isaac Sim; frontier-based camera planning, MatchAnything, DepthPro, SAM-3D / 3DGS.\\[2pt]
-\textbf{Programming:} Python, PyTorch, CUDA, Hugging Face, ONNX, TensorRT.
+\textbf{On-Device / Edge:} Jetson Orin (PyTorch + TensorRT), Meta AR Glass, Android (ONNX / NNAPI), Unitree Go2, RealSense D435i.\\[2pt]
+\textbf{Models \& Tools:} Stable Diffusion, CLIP, Gemini, GPT-4o/5, InternVL, Qwen-VL, LLaVA-Video, Grounding-SAM, DepthPro.\\[2pt]
+\textbf{Programming:} Python, PyTorch, CUDA, C/C++.
 
 \end{document}
