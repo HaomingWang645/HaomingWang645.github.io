@@ -1,0 +1,179 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.9cm, right=1.9cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{calc}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{darkred}{RGB}{139,0,0}
+\definecolor{accent}{RGB}{30,55,120}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent,
+  pdftitle={Haoming Wang -- CV}, pdfauthor={Haoming Wang}}
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+\raggedright
+
+\titleformat{\section}{\scshape\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+\newenvironment{datedentry}[1]{%
+  \par\noindent
+  \begin{minipage}[t]{2.8cm}\raggedright\small #1\end{minipage}%
+  \hspace{0.3cm}%
+  \begin{minipage}[t]{\dimexpr\linewidth-3.1cm\relax}\raggedright
+}{\end{minipage}\par\medskip}
+
+\newenvironment{publist}{
+  \begin{enumerate}[leftmargin=1.7em, itemsep=4pt, parsep=0pt, topsep=2pt,
+                    label=\arabic*., ref=\arabic*, series=pubs]
+}{\end{enumerate}}
+
+\newenvironment{publistcont}{
+  \begin{enumerate}[resume*=pubs]
+}{\end{enumerate}}
+
+\newcommand{\citeref}[1]{\hyperref[#1]{[\ref*{#1}]}}
+
+\newcommand{\me}{\underline{\textbf{Haoming Wang}}}
+\newcommand{\meco}{\underline{\textbf{Haoming Wang (co-first)}} }
+\newcommand{\meanon}{\underline{\textbf{Haoming Wang}}}
+
+\begin{document}
+
+% ===== HEADER =====
+\noindent
+\begin{minipage}[t]{0.58\linewidth}
+  \vspace{0pt}
+  {\fontsize{24pt}{26pt}\selectfont \textbf{HAOMING WANG}}\\[2pt]
+  {\scshape\normalsize Ph.D.\ Candidate}
+\end{minipage}%
+\begin{minipage}[t]{0.42\linewidth}
+  \vspace{0pt}
+  \raggedleft\small
+  +1 412-909-7571 \\
+  \href{mailto:haw200@pitt.edu}{haw200@pitt.edu} \\
+  Pittsburgh, PA, USA \\[2pt]
+  \href{https://haomingwang645.github.io/}{Homepage}\ $\diamond$\ \href{https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ}{Scholar}\ $\diamond$\ \href{https://www.linkedin.com/in/haoming-wang-40a6a7239/}{LinkedIn}\ $\diamond$\ \href{https://github.com/HaomingWang645}{GitHub}
+\end{minipage}
+
+% ===== SUMMARY =====
+\section{Summary}
+\begin{itemize}[leftmargin=1.1em, itemsep=2pt, topsep=2pt]
+  \item \textbf{Full-Stack ML Execution:} Bridging the gap between theoretical AI and real-world application. Consistently architect and validate end-to-end VLM/LLM pipelines on physical hardware.
+  \item \textbf{Multimodal Foundation Models:} Deep domain expertise in visual spatial reasoning. Systematically diagnosed model bottlenecks via latent-state analysis and benchmarking, and developed novel training-free inference pipelines and latent regularization methods for performance improvement.
+  \item \textbf{Recognized Academic Excellence:} First-author publications across top-tier computer vision, AI, and mobile systems venues (CVPR'26 Oral, AAAI'25, MobiSys'25, MobiCom'25).
+\end{itemize}
+
+% ===== RESEARCH INTERESTS =====
+%\section{Research Interests}
+%Spatial intelligence, Multimodal LLMs reasoning, generative AI on mobile devices.
+
+% ===== EDUCATION =====
+\section{Education}
+
+\begin{datedentry}{Sept 2022 -- May 2027 (Anticipated)}
+\textbf{Ph.D.\ in Electrical and Computer Engineering}\\
+University of Pittsburgh, Pittsburgh, PA, USA\\
+Advisor: Prof.\ Wei Gao, Intelligent System Lab
+\end{datedentry}
+
+\begin{datedentry}{Sept 2018 -- May 2022}
+\textbf{B.Eng.\ in Automation} \hfill GPA: 3.8/4.0\\
+Zhejiang University, Hangzhou, China\\
+Chu Kochen Honors College
+\end{datedentry}
+
+% ===== EXPERIENCE =====
+\section{Experience}
+
+
+\textbf{Graduate Student Researcher}\\
+Intelligent System Lab, University of Pittsburgh, Pittsburgh, PA, USA
+\begin{itemize}[leftmargin=1.1em, itemsep=2pt, topsep=3pt]
+  \item \textbf{Spatial Reasoning Performance Improvement (Sep 2025 -- Present).} Improved VLM spatial reasoning across training and inference: Dirichlet-energy regularizer shaping a latent subspace encoding 3D scene topology \citeref{pub:vlmlatent}; training-free multi-view fusion deployed on Jetson Orin, AR Glass, and smartphone \citeref{pub:mosaic}; co-developed VLM-based autonomous mobile systems for small-object search and infrastructure-assisted navigation on real quadruped and wheeled robots.
+
+  \item \textbf{Spatial Reasoning Benchmarking and Analysis (May 2025 -- Jan 2026).} Established benchmarks and diagnostic methodologies for VLM spatial reasoning: customizable framework generating photo-realistic 3D test scenes with user-controllable complexity axes \citeref{pub:infinibench}; cognitively grounded multi-view benchmark with reasoning-path / latent-state analysis \citeref{pub:remindview}.
+
+  \item \textbf{Efficient Model Training on Mobile Devices (Sep 2022 -- May 2025).} Designed efficient training systems for heterogeneous mobile / IoT fleets: explainable warm-start for on-device LLM personalization \citeref{pub:xpert}; gradient-corrected federated AIoT training under data and device heterogeneity \citeref{pub:feddc}; staleness-tolerant federated learning via gradient inversion \citeref{pub:aaai}.
+
+\end{itemize}
+
+
+% ===== SELECTED PUBLICATIONS =====
+\section{Selected Papers (first-author)}
+
+\begin{publist}
+\item\label{pub:infinibench} \textbf{\textcolor{darkred}{[CVPR'26 Oral]}\ InfiniBench: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity}\\
+\me, Qiyao Xue, Wei Gao.\\
+\textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2026 (Acceptance 25.4\%, Oral). \href{https://arxiv.org/abs/2511.18200}{[arXiv]}\,\href{https://github.com/pittisl/infinibench}{[Code]}\,\href{https://huggingface.co/datasets/Haoming645/infinibench}{[Data]}
+
+
+\item\label{pub:vlmlatent} \textbf{Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models}\\
+\me, Wei Gao.\\
+\textit{Preprint}, 2026. \href{https://haomingwang645.github.io/pdfs/arxiv26_vlm_latent_shaping.pdf}{[Paper]}\,\href{https://github.com/pittisl/vlm-latent-shaping}{[Code]}
+
+\item\label{pub:mosaic} \textbf{MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation}\\
+\me, Qiyao Xue, Weichen Liu, Wei Gao.\\
+\textit{Under Review}, 2026. \href{https://www.arxiv.org/abs/2602.07082}{[arXiv]}
+
+\item\label{pub:remindview} \textbf{Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective}\\
+Qiyao Xue, \meco, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao.\\
+\textit{Under Review}, 2026. \href{https://arxiv.org/abs/2512.02340}{[arXiv]}
+
+\item\label{pub:xpert} \textbf{\textcolor{darkred}{[MobiSys'25]}\ Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection}\\
+\me, Boyuan Yang, Xiangyu Yin, Wei Gao.\\
+\textit{Proceedings of the 23rd ACM International Conference on Mobile Systems, Applications and Services (MobiSys)}, 2025 (Acceptance 18.0\%). \href{https://haomingwang645.github.io/pdfs/xpert_paper.pdf}{[Paper]}
+
+\item\label{pub:feddc} \textbf{\textcolor{darkred}{[MobiCom'25]}\ When Device Delays Meet Data Heterogeneity in Federated AIoT Applications}\\
+\me, Wei Gao.\\
+\textit{Proceedings of the 31st ACM International Conference on Mobile Computing and Networking (MobiCom)}, 2025 (Acceptance 17.1\%). \href{https://haomingwang645.github.io/pdfs/feddc_paper.pdf}{[Paper]}
+
+\item\label{pub:aaai} \textbf{\textcolor{darkred}{[AAAI'25]}\ Tackling Intertwined Data and Device Heterogeneities in Federated Learning with Unlimited Staleness}\\
+\me, Wei Gao.\\
+\textit{Proceedings of the 39th AAAI Conference on Artificial Intelligence}, 2025 (Acceptance 23.4\%). \href{https://arxiv.org/abs/2309.13536}{[arXiv]}
+
+
+
+
+\item\label{pub:freeze} \textbf{FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing}\\
+Kai Huang, \meco, Wei Gao.\\
+\textit{Preprint}, 2024. \href{https://haomingwang645.github.io/pdfs/freezeasguard_paper.pdf}{[Paper]}\,\href{https://github.com/pittisl/FreezeAsGuard}{[Code]}
+
+
+
+\end{publist}
+
+\vspace{2pt}
+\noindent\small\textit{Full publication list (including co-authored papers on VLM-based navigation) available on \href{https://haomingwang645.github.io/}{My homepage}.}
+\normalsize
+
+% ===== HONORS & AWARDS =====
+\section{Honors \& Awards}
+
+\begin{datedentry}{April 2026}
+\textbf{ECE Research Assistant of the Year}\\
+Department of Electrical and Computer Engineering, University of Pittsburgh
+\end{datedentry}
+
+% ===== TECHNICAL SKILLS =====
+% ===== TECHNICAL SKILLS =====
+\section{Technical Skills}
+\textbf{Programming \& ML Frameworks:} Python, PyTorch, C/C++, Hugging Face Transformers, vLLM, DeepSpeed.\\
+\
+\textbf{On-Device Inference \& Optimization:} Model quantization and acceleration using TensorRT, ONNX Runtime, and NNAPI; deployed end-to-end pipelines on Jetson AGX Orin and Android smartphones.\\
+\textbf{Model Training \& Alignment:} SFT, GRPO / DPO, LoRA / PEFT;\\
+\textbf{Embodied AI \& Simulation:} Isaac Sim, Habitat, Blender.
+
+
+\end{document}
