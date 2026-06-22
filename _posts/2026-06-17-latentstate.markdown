@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "<span style=\"color:#c00\">[ECCV26]</span> Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective"
-date:   2026-04-01 00:00:00 +00:00
+date:   2026-06-17 00:00:00 +00:00
 image: /paper_images/reasoning-path.png
 categories: research_pub
 author: "Haoming Wang"
