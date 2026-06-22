@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective"
+title:  "<span style=\"color:#c00\">[ECCV26]</span> Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective"
 date:   2026-04-01 00:00:00 +00:00
 image: /paper_images/reasoning-path.png
-categories: research_recent
+categories: research_pub
 author: "Haoming Wang"
 
+venue: "Proceedings of the European Conference on Computer Vision (ECCV) 2026"
 authors: "Qiyao Xue, <strong>Haoming Wang (co-author)</strong>, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao"
 subtitle: "latentstate"
 paper: https://arxiv.org/pdf/2512.02340.pdf

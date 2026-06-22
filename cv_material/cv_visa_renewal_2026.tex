@@ -1,0 +1,151 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.9cm, right=1.9cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{calc}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{darkred}{RGB}{139,0,0}
+\definecolor{accent}{RGB}{30,55,120}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent,
+  pdftitle={Haoming Wang -- Curriculum Vitae}, pdfauthor={Haoming Wang}}
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+\raggedright
+
+\titleformat{\section}{\scshape\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+\newenvironment{datedentry}[1]{%
+  \par\noindent
+  \begin{minipage}[t]{2.8cm}\raggedright\small #1\end{minipage}%
+  \hspace{0.3cm}%
+  \begin{minipage}[t]{\dimexpr\linewidth-3.1cm\relax}\raggedright
+}{\end{minipage}\par\medskip}
+
+\newenvironment{publist}{
+  \begin{enumerate}[leftmargin=1.7em, itemsep=4pt, parsep=0pt, topsep=2pt,
+                    label=\arabic*.]
+}{\end{enumerate}}
+
+\newcommand{\me}{\underline{\textbf{Haoming Wang}}}
+\newcommand{\meco}{\underline{\textbf{Haoming Wang (co-first author)}} }
+
+\begin{document}
+
+% ===== HEADER =====
+\noindent
+\begin{minipage}[t]{0.58\linewidth}
+  \vspace{0pt}
+  {\fontsize{24pt}{26pt}\selectfont \textbf{HAOMING WANG}}\\[2pt]
+  {\scshape\normalsize Doctoral Student, Electrical and Computer Engineering}
+\end{minipage}%
+\begin{minipage}[t]{0.42\linewidth}
+  \vspace{0pt}
+  \raggedleft\small
+  University of Pittsburgh \\
+  \href{mailto:haw200@pitt.edu}{haw200@pitt.edu} \\
+  +1 412-909-7571 \\
+  Pittsburgh, PA, USA \\[2pt]
+  \href{https://haomingwang645.github.io/}{Homepage}\ $\diamond$\ \href{https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ}{Google Scholar}\ $\diamond$\ \href{https://www.linkedin.com/in/haoming-wang-40a6a7239/}{LinkedIn}
+\end{minipage}
+
+% ===== SUMMARY =====
+\section{Summary}
+Doctoral student in Electrical and Computer Engineering working on \textbf{software systems for consumer mobile devices and home service robots} (e.g., helping users locate household items, personalized smartphone software, distributed updates across home Internet-of-Things devices).
+
+% ===== EDUCATION =====
+\section{Education}
+
+\begin{datedentry}{Sept 2022 -- May 2027 (expected)}
+\textbf{Doctor of Philosophy in Electrical and Computer Engineering}\\
+University of Pittsburgh, Pittsburgh, Pennsylvania, USA\\
+Advisor: Prof.\ Wei Gao
+\end{datedentry}
+
+\begin{datedentry}{Sept 2018 -- May 2022}
+\textbf{Bachelor of Engineering in Automation} \hfill GPA: 3.8/4.0\\
+Zhejiang University, Hangzhou, China\\
+Chu Kochen Honors College
+\end{datedentry}
+
+% ===== PUBLICATIONS =====
+\section{Publications (Peer-Reviewed Conferences)}
+
+\begin{publist}
+\item \textbf{InfiniBench: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity}\\
+\me, Qiyao Xue, Wei Gao.\\
+\textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2026 (Oral presentation; acceptance rate 25.4\%). \href{https://arxiv.org/abs/2511.18200}{[arXiv]}
+
+\item \textbf{Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection}\\
+\me, Boyuan Yang, Xiangyu Yin, Wei Gao.\\
+\textit{Proceedings of the 23rd ACM International Conference on Mobile Systems, Applications and Services (MobiSys)}, 2025 (acceptance rate 18.0\%). \href{https://haomingwang645.github.io/pdfs/xpert_paper.pdf}{[Paper]}
+
+\item \textbf{When Device Delays Meet Data Heterogeneity in Federated AIoT Applications}\\
+\me, Wei Gao.\\
+\textit{Proceedings of the 31st ACM International Conference on Mobile Computing and Networking (MobiCom)}, 2025 (acceptance rate 17.1\%). \href{https://haomingwang645.github.io/pdfs/feddc_paper.pdf}{[Paper]}
+
+\item \textbf{Tackling Intertwined Data and Device Heterogeneities in Federated Learning with Unlimited Staleness}\\
+\me, Wei Gao.\\
+\textit{Proceedings of the 39th AAAI Conference on Artificial Intelligence}, 2025 (acceptance rate 23.4\%). \href{https://arxiv.org/abs/2309.13536}{[arXiv]}
+\end{publist}
+
+\vspace{4pt}
+\noindent\textbf{Preprints and Manuscripts Under Review:}
+\begin{publist}
+\item \textbf{Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models}, \me, Wei Gao. Preprint, 2026.
+
+\item \textbf{MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation}, \me, Qiyao Xue, Weichen Liu, Wei Gao. Under Review, 2026.
+
+\item \textbf{Deciphering Personalization: Towards Fine-Grained Explainability in Natural Language for Personalized Image Generation Models}, \me, Wei Gao. Under Review, 2025.
+
+\item \textbf{Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective}, Qiyao Xue, \meco, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao. Under Review, 2026.
+\end{publist}
+
+\vspace{2pt}
+\noindent\small\textit{The complete and current publication record is available on the author's \href{https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ}{Google Scholar profile}.}
+\normalsize
+
+% ===== HONORS & AWARDS =====
+\section{Honors and Awards}
+
+\begin{datedentry}{April 2026}
+\textbf{Research Assistant of the Year}\\
+Department of Electrical and Computer Engineering, University of Pittsburgh
+\end{datedentry}
+
+% ===== LANGUAGES =====
+\section{Languages}
+Mandarin Chinese (native), English (professional working proficiency).
+
+\newpage
+
+% ===== RESEARCH PLAN =====
+\section{Proposed Research Plan, 2026--2027 (Final Year of Doctoral Program)}
+
+\textbf{Objective.} Consolidate prior research into a doctoral dissertation on \textit{software systems for consumer mobile devices and home service robots}, with continued focus on civilian, everyday-use applications.
+
+\begin{itemize}[leftmargin=1.1em, itemsep=5pt, topsep=4pt]
+  \item \textbf{September 2026 -- December 2026.} Continue developing and evaluating indoor scene-understanding software for consumer smartphones and mixed-reality glasses. The focus is on improving reliability under realistic everyday conditions, such as poor lighting, cluttered rooms, and limited on-device memory. Target deliverable: one journal manuscript on practical reliability testing.
+
+  \item \textbf{January 2027 -- March 2027.} Extend the open-source 3D-rendering-based software testing platform to cover additional consumer use cases -- for example, navigation assistance for visually impaired users and locating misplaced everyday household items. Target deliverable: one conference paper submission.
+
+  \item \textbf{April 2027 -- May 2027.} Doctoral dissertation defense and graduation. The thesis will summarize the design, implementation, and evaluation of consumer-device and home-service-robot software developed throughout the doctoral program.
+\end{itemize}
+
+\textbf{Supervision and resources.} All work will be conducted at the Intelligent System Lab, University of Pittsburgh, under the supervision of Prof.~Wei Gao. All software libraries and hardware used are open-source or commercially available consumer products; no restricted-access data, hardware, or facilities are required.
+
+\textbf{Status of doctoral program.} Required coursework and qualifying examinations have been completed. The proposed activities above represent the final phase of the doctoral program, after which the candidate will return to seek employment in the international software industry.
+
+\end{document}
