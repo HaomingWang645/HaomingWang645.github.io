@@ -19,6 +19,7 @@ $venue-aaai:    #c23111;
 $venue-mobicom: #00897b;
 $venue-mobisys: #009688;
 $venue-neurips: #6f42c1;
+$venue-eccv:    #3949ab;
 $venue-iclr:    #d97706;
 $venue-default: #455a64;
 $venue-preprint:#6c757d;
@@ -568,6 +569,7 @@ h2 a:hover { color: $accent; }
 .venue-mobicom  { background: $venue-mobicom !important; }
 .venue-mobisys  { background: $venue-mobisys !important; }
 .venue-neurips  { background: $venue-neurips !important; }
+.venue-eccv     { background: $venue-eccv !important; }
 .venue-iclr     { background: $venue-iclr !important; }
 .venue-preprint { background: $venue-preprint !important; }
 

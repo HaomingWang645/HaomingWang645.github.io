@@ -5,6 +5,7 @@ date:   2026-03-01 00:00:01 +00:00
 image: /paper_images/globalnav.png
 categories: others
 status: under-review
+hidden: true
 author: "Haoming Wang"
 
 authors: "Anonymous Authors (incl. <strong>Haoming Wang</strong>)"

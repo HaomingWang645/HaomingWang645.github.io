@@ -220,6 +220,7 @@
             {% elsif post.title contains 'MobiCom' %}{% assign venue_short = 'MobiCom' %}{% assign venue_class = 'venue-mobicom' %}
             {% elsif post.title contains 'MobiSys' %}{% assign venue_short = 'MobiSys' %}{% assign venue_class = 'venue-mobisys' %}
             {% elsif post.title contains 'NeurIPS' %}{% assign venue_short = 'NeurIPS' %}{% assign venue_class = 'venue-neurips' %}
+            {% elsif post.title contains 'ECCV' %}{% assign venue_short = 'ECCV26' %}{% assign venue_class = 'venue-eccv' %}
             {% elsif post.title contains 'ICLR' %}{% assign venue_short = 'ICLR' %}{% assign venue_class = 'venue-iclr' %}
             {% else %}{% assign venue_short = 'venue' %}{% endif %}
             <li>
@@ -303,6 +304,7 @@
         <div class="publications others-section">
           <ol class="bibliography">
             {% for post in other_posts %}
+            {% if post.hidden %}{% continue %}{% endif %}
             {% if post.status == 'under-review' %}{% assign other_badge = 'under review' %}{% assign other_periodical = 'under review' %}{% else %}{% assign other_badge = 'note' %}{% assign other_periodical = 'technical report' %}{% endif %}
             <li>
               <div class="row">
@@ -342,6 +344,8 @@
               <div class="exp-role"><strong>Service</strong></div>
               <ul class="exp-list">
                 <li>Reviewer, <em>ACM Transactions on Internet of Things</em> (TIOT)</li>
+                <li>Reviewer, <em>NeurIPS 2026</em></li>
+                <li>Reviewer, <em>Pacific Graphics 2026</em></li>
                 <li>TPC Member, <a href="https://s3-workshop.neslab.it/" target="_blank">ACM S3 2026 Workshop</a></li>
               </ul>
             </div>

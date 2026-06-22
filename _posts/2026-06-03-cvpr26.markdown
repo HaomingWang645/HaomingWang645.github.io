@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Attending CVPR 2026"
+date:   2026-06-03 00:00:00 +00:00
+categories: news_item
+author: "Haoming Wang"
+news_text: 'Attended <strong>CVPR 2026</strong> in Denver, Jun 3&ndash;7.'
+
+---
