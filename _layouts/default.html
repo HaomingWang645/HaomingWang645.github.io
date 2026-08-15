@@ -209,6 +209,7 @@
           <ol class="bibliography">
             {% assign pub_posts = site.posts | where: "categories", "research_pub" %}
             {% for post in pub_posts %}
+            {% if post.homepage_group == 'others' %}{% continue %}{% endif %}
             {% assign venue_class = 'venue-default' %}
             {% if post.title contains 'AAAI' %}{% assign venue_short = 'AAAI' %}{% assign venue_class = 'venue-aaai' %}
             {% elsif post.title contains 'CVPR' %}
@@ -258,58 +259,31 @@
           </ol>
         </div>
 
-        <!-- Preprints -->
+        <!-- Others: preprints, non-selected publications, and technical reports -->
         {% assign arxiv_posts = site.posts | where: "categories", "research_arxiv" %}
-        {% if arxiv_posts.size > 0 %}
-        <h2><a id="preprints" style="color: inherit">preprints</a></h2>
-        <div class="publications">
-          <ol class="bibliography">
-            {% for post in arxiv_posts %}
-            <li>
-              <div class="row">
-                <div class="col col-sm-3 abbr">
-                  <abbr class="badge rounded w-100 venue-badge preprint">
-                    <div>preprint</div>
-                  </abbr>
-                  {% if post.image %}
-                  <figure>
-                    <img src="{{ post.image }}" class="preview z-depth-1 rounded" alt="{{ post.subtitle }}" loading="eager">
-                  </figure>
-                  {% endif %}
-                </div>
-                <div class="col-sm-9">
-                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
-                  <div class="author">{{ post.authors }}</div>
-                  <div class="periodical">
-                    <em>preprint</em>, {{ post.date | date: "%Y" }}
-                  </div>
-                  <div class="links">
-                    {% if post.paper %}<a href="{{ post.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>{% endif %}
-                    {% if post.arxiv %}<a href="{{ post.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>{% endif %}
-                    {% if post.code %}<a href="{{ post.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>{% endif %}
-                  </div>
-                  {% if post.excerpt %}<div class="abstract">{{ post.excerpt }}</div>{% endif %}
-                </div>
-              </div>
-            </li>
-            {% endfor %}
-          </ol>
-        </div>
-        {% endif %}
-
-        <!-- Other -->
         {% assign other_posts = site.posts | where: "categories", "others" %}
-        {% if other_posts.size > 0 %}
-        <h2><a id="others" style="color: inherit">other</a></h2>
+        {% assign moved_pub_posts = site.posts | where: "homepage_group", "others" %}
+        {% assign grouped_other_posts = other_posts | concat: arxiv_posts | concat: moved_pub_posts | sort: "date" | reverse %}
+        {% if grouped_other_posts.size > 0 %}
+        <h2><a id="others" style="color: inherit">others</a></h2>
         <div class="publications others-section">
           <ol class="bibliography">
-            {% for post in other_posts %}
+            {% for post in grouped_other_posts %}
             {% if post.hidden %}{% continue %}{% endif %}
-            {% if post.status == 'under-review' %}{% assign other_badge = 'under review' %}{% assign other_periodical = 'under review' %}{% else %}{% assign other_badge = 'note' %}{% assign other_periodical = 'technical report' %}{% endif %}
+            {% if post.categories contains 'research_arxiv' %}
+              {% assign other_badge = 'preprint' %}{% assign other_periodical = 'preprint' %}{% assign other_badge_class = 'venue-preprint' %}
+            {% elsif post.venue %}
+              {% assign other_badge = post.homepage_badge | default: 'publication' %}{% assign other_periodical = post.venue %}
+              {% if post.title contains 'ECCV' %}{% assign other_badge_class = 'venue-eccv' %}{% else %}{% assign other_badge_class = 'venue-default' %}{% endif %}
+            {% elsif post.status == 'under-review' %}
+              {% assign other_badge = 'under review' %}{% assign other_periodical = 'under review' %}{% assign other_badge_class = 'venue-preprint' %}
+            {% else %}
+              {% assign other_badge = 'note' %}{% assign other_periodical = 'technical report' %}{% assign other_badge_class = 'venue-preprint' %}
+            {% endif %}
             <li>
               <div class="row">
                 <div class="col col-sm-3 abbr">
-                  <abbr class="badge rounded w-100 venue-badge venue-preprint">
+                  <abbr class="badge rounded w-100 venue-badge {{ other_badge_class }}">
                     <div>{{ other_badge }}</div>
                   </abbr>
                   {% if post.image %}
