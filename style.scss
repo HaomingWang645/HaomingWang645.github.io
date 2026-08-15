@@ -573,6 +573,9 @@ h2 a:hover { color: $accent; }
 .venue-iclr     { background: $venue-iclr !important; }
 .venue-preprint { background: $venue-preprint !important; }
 
+// Highlight the venue name for accepted publications
+.publications .periodical .venue-accepted { color: #1565c0; }
+
 .publications figure { margin: 0; }
 .publications .preview {
   width: 100%;

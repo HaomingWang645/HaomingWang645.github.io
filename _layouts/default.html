@@ -239,7 +239,7 @@
                   <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical">
-                    {% if post.venue %}<em>{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
+                    {% if post.venue %}<em class="venue-accepted">{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
                   </div>
                   <div class="links">
                     {% if post.paper %}<a href="{{ post.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>{% endif %}
