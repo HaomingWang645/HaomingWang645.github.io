@@ -1,9 +1,2 @@
-# Upcoming conferences Haoming will attend.
-# Rendered as a single callout line above the news section.
-# Format on the page: "<name> (<location>, <dates>)"
-# Update the date strings with the exact ranges once announced.
-
-- name: MobiSys 26
-  location: Cambridge
-  dates: Jun 21-25
-  url: https://www.sigmobile.org/mobisys/2026/
+# Upcoming conferences rendered as a standalone callout above the news section.
+# MobiSys 26 is now listed in the news feed instead.

@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Attending MobiSys 2026"
+date: 2026-06-21 00:00:00 +00:00
+categories: news_item
+author: "Haoming Wang"
+news_text: 'I''ll be at <a href="https://www.sigmobile.org/mobisys/2026/" target="_blank"><strong>MobiSys 26</strong></a> (Cambridge, Jun 21&ndash;25) &mdash; <em>let''s chat!</em>'
+---
