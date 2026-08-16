@@ -9,7 +9,7 @@ homepage_group: others
 homepage_badge: "ECCV26 workshop"
 
 venue: "LifeGenIP Workshop at the European Conference on Computer Vision (ECCV) 2026"
-authors: "Kai Huang, <strong>Haoming Wang (co-author)</strong>, Wei Gao"
+authors: "Kai Huang, <strong>Haoming Wang (co-first)</strong>, Wei Gao"
 subtitle: "freezeasguard"
 paper: /pdfs/freezeasguard_paper.pdf
 

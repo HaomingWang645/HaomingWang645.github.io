@@ -7,7 +7,7 @@ categories: research_pub
 author: "Haoming Wang"
 
 venue: "Proceedings of the European Conference on Computer Vision (ECCV) 2026"
-authors: "Qiyao Xue, <strong>Haoming Wang (co-author)</strong>, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao"
+authors: "Qiyao Xue, <strong>Haoming Wang (co-first)</strong>, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao"
 subtitle: "latentstate"
 paper: https://arxiv.org/pdf/2512.02340.pdf
 arxiv: https://arxiv.org/abs/2512.02340
