@@ -10,7 +10,7 @@ author: "Haoming Wang"
 venue: "ACM International Conference on Mobile Computing and Networking (MobiCom) 2026"
 authors: "<strong>Haoming Wang</strong>, Qiyao Xue, Weichen Liu, Wei Gao"
 subtitle: "spatialmind"
-paper: https://mobicom26.hotcrp.com/paper/1215
+paper: /pdfs/spatialmind.pdf
 arxiv: https://arxiv.org/abs/2602.07082
 
 ---

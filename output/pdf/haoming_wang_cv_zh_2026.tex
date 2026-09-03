@@ -1,0 +1,169 @@
+% !TEX program = xelatex
+\documentclass[10pt,letterpaper,fontset=fandol]{ctexart}
+
+\usepackage[top=1.45cm,bottom=1.45cm,left=1.75cm,right=1.75cm]{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{array}
+\usepackage{calc}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica Neue}
+
+\definecolor{darkred}{RGB}{139,0,0}
+\definecolor{accent}{RGB}{30,55,120}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdftitle={Haoming Wang - 中文简历},
+  pdfauthor={Haoming Wang}
+}
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+\raggedright
+
+\titleformat{\section}{\sffamily\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{0pt}{8pt}{3pt}
+
+\newenvironment{datedentry}[1]{%
+  \par\noindent
+  \begin{minipage}[t]{3.0cm}\raggedright\small #1\end{minipage}%
+  \hspace{0.25cm}%
+  \begin{minipage}[t]{\dimexpr\linewidth-3.25cm\relax}\raggedright
+}{\end{minipage}\par\vspace{3pt}}
+
+\newenvironment{publist}{
+  \begin{enumerate}[leftmargin=1.65em,itemsep=3pt,parsep=0pt,topsep=2pt,
+                    label=\arabic*.,ref=\arabic*,series=pubs]
+}{\end{enumerate}}
+
+\newcommand{\citeref}[1]{\hyperref[#1]{[\ref*{#1}]}}
+\newcommand{\me}{\underline{\textbf{Haoming Wang}}}
+\newcommand{\meco}{\underline{\textbf{Haoming Wang（共同一作）}}}
+
+\begin{document}
+
+% ===== HEADER =====
+\noindent
+\begin{minipage}[t]{0.57\linewidth}
+  \vspace{0pt}
+  {\fontsize{23pt}{25pt}\selectfont\sffamily\textbf{HAOMING WANG}}\\[2pt]
+  {\sffamily\normalsize 博士研究生}
+\end{minipage}%
+\begin{minipage}[t]{0.43\linewidth}
+  \vspace{0pt}
+  \raggedleft\small
+  +1 412-909-7571 \\
+  \href{mailto:haw200@pitt.edu}{haw200@pitt.edu} \\
+  美国宾夕法尼亚州匹兹堡市 \\[2pt]
+  \href{https://haomingwang645.github.io/}{个人主页}\ $\diamond$\ \href{https://scholar.google.com.hk/citations?user=bf6LCjUAAAAJ}{Google Scholar}\ $\diamond$\ \href{https://www.linkedin.com/in/haoming-wang-40a6a7239/}{LinkedIn}\ $\diamond$\ \href{https://github.com/HaomingWang645}{GitHub}
+\end{minipage}
+
+% ===== SUMMARY =====
+\section{个人简介}
+\begin{itemize}[leftmargin=1.1em,itemsep=1.5pt,topsep=2pt]
+  \item \textbf{全栈机器学习研发：}贯通人工智能理论与真实场景应用，持续设计并验证运行于实体硬件的端到端视觉语言模型（VLM）与大语言模型（LLM）系统。
+  \item \textbf{多模态基础模型：}专注视觉空间推理；通过潜在状态分析与基准测试系统诊断模型瓶颈，并提出无需训练的推理流程及潜在表示正则化方法以提升性能。
+  \item \textbf{突出的学术成果：}以第一作者或共同第一作者在计算机视觉、人工智能与移动系统顶级会议发表论文，包括 CVPR'26 Oral、ECCV'26、MobiCom'26、AAAI'25、MobiSys'25 与 MobiCom'25。
+\end{itemize}
+
+% ===== EDUCATION =====
+\section{教育背景}
+
+\begin{datedentry}{2022年9月 -- 2027年5月（预计）}
+\textbf{电气与计算机工程博士}\\
+匹兹堡大学，美国宾夕法尼亚州匹兹堡市\\
+导师：Wei Gao 教授；智能系统实验室
+\end{datedentry}
+
+\begin{datedentry}{2018年9月 -- 2022年5月}
+\textbf{自动化专业，工学学士} \hfill GPA：3.8/4.0\\
+浙江大学，中国浙江省杭州市\\
+竺可桢学院
+\end{datedentry}
+
+% ===== EXPERIENCE =====
+\section{科研经历}
+
+\textbf{博士生研究助理}\\
+智能系统实验室，匹兹堡大学，美国宾夕法尼亚州匹兹堡市
+\begin{itemize}[leftmargin=1.1em,itemsep=1.5pt,topsep=2pt]
+  \item \textbf{空间推理性能提升（2025年9月至今）：}从训练与推理两方面提升 VLM 的空间推理能力：提出狄利克雷能量正则项，塑造编码三维场景拓扑的潜在子空间 \citeref{pub:vlmlatent}；将无需训练的多视角融合方法部署至 Jetson Orin、AR 眼镜与智能手机 \citeref{pub:spatialmind}；共同研发面向小目标搜索及基础设施辅助导航的 VLM 自主移动系统，并在真实四足与轮式机器人上验证。
+  \item \textbf{空间推理基准与分析（2025年5月 -- 2026年1月）：}构建 VLM 空间推理基准及诊断方法：开发可按用户指定复杂度维度生成照片级真实三维测试场景的可定制框架 \citeref{pub:infinibench}；构建受认知科学启发的多视角基准，并开展推理路径与潜在状态分析 \citeref{pub:reasoningpath}。
+  \item \textbf{移动设备高效模型训练（2022年9月 -- 2025年5月）：}面向异构移动与物联网设备集群设计高效训练系统：以可解释模型选择加速端侧 LLM 个性化 \citeref{pub:xpert}；在数据与设备异构条件下实现梯度校正的联邦 AIoT 训练 \citeref{pub:feddc}；基于梯度反演实现可容忍任意陈旧度的联邦学习 \citeref{pub:aaai}。
+\end{itemize}
+
+% ===== SELECTED PUBLICATIONS =====
+\section{代表性论文（第一作者或共同第一作者）}
+
+\begin{publist}
+\item\label{pub:infinibench} \textbf{\textcolor{darkred}{[CVPR'26 Oral]} InfiniBench: Infinite Benchmarking for Visual Spatial Reasoning with Customizable Scene Complexity}\\
+\me, Qiyao Xue, Wei Gao.\\
+\textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2026（录用率 25.4\%，Oral）。\href{https://arxiv.org/abs/2511.18200}{[arXiv]}\,\href{https://github.com/pittisl/infinibench}{[代码]}\,\href{https://huggingface.co/datasets/Haoming645/infinibench}{[数据]}
+
+\Needspace{4\baselineskip}
+\item\label{pub:vlmlatent} \textbf{Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models}\\
+\me, Wei Gao.\\
+\textit{预印本}, 2026。\href{https://haomingwang645.github.io/pdfs/arxiv26_vlm_latent_shaping.pdf}{[论文]}\,\href{https://github.com/pittisl/vlm-latent-shaping}{[代码]}
+
+\Needspace{4\baselineskip}
+\item\label{pub:spatialmind} \textbf{\textcolor{darkred}{[MobiCom'26]} SpatialMind: Spatially Aware On-Device Embodied AI via Viewpoint Integration}\\
+\me, Qiyao Xue, Weichen Liu, Wei Gao.\\
+\textit{ACM International Conference on Mobile Computing and Networking (MobiCom)}, 2026。\href{https://www.arxiv.org/abs/2602.07082}{[arXiv]}
+
+\Needspace{4\baselineskip}
+\item\label{pub:reasoningpath} \textbf{\textcolor{darkred}{[ECCV'26]} Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective}\\
+Qiyao Xue, \meco, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao.\\
+\textit{European Conference on Computer Vision (ECCV)}, 2026。\href{https://arxiv.org/abs/2512.02340}{[arXiv]}
+
+\Needspace{4\baselineskip}
+\item\label{pub:xpert} \textbf{\textcolor{darkred}{[MobiSys'25]} Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection}\\
+\me, Boyuan Yang, Xiangyu Yin, Wei Gao.\\
+\textit{ACM International Conference on Mobile Systems, Applications and Services (MobiSys)}, 2025（录用率 18.0\%）。\href{https://haomingwang645.github.io/pdfs/xpert_paper.pdf}{[论文]}
+
+\Needspace{4\baselineskip}
+\item\label{pub:feddc} \textbf{\textcolor{darkred}{[MobiCom'25]} When Device Delays Meet Data Heterogeneity in Federated AIoT Applications}\\
+\me, Wei Gao.\\
+\textit{ACM International Conference on Mobile Computing and Networking (MobiCom)}, 2025（录用率 17.1\%）。\href{https://haomingwang645.github.io/pdfs/feddc_paper.pdf}{[论文]}
+
+\Needspace{4\baselineskip}
+\item\label{pub:aaai} \textbf{\textcolor{darkred}{[AAAI'25]} Tackling Intertwined Data and Device Heterogeneities in Federated Learning with Unlimited Staleness}\\
+\me, Wei Gao.\\
+\textit{AAAI Conference on Artificial Intelligence}, 2025（录用率 23.4\%）。\href{https://arxiv.org/abs/2309.13536}{[arXiv]}
+
+\Needspace{4\baselineskip}
+\item\label{pub:freeze} \textbf{\textcolor{darkred}{[ECCV'26 Workshop]} FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing}\\
+Kai Huang, \meco, Wei Gao.\\
+\textit{LifeGenIP Workshop at the European Conference on Computer Vision (ECCV)}, 2026。\href{https://haomingwang645.github.io/pdfs/freezeasguard_paper.pdf}{[论文]}\,\href{https://github.com/pittisl/FreezeAsGuard}{[代码]}
+\end{publist}
+
+\vspace{1pt}
+\small\textit{完整论文列表（含 VLM 导航方向的合作论文）请见\href{https://haomingwang645.github.io/}{个人主页}。}
+\normalsize
+
+% ===== HONORS & AWARDS =====
+\section{荣誉与奖励}
+
+\begin{datedentry}{2026年4月}
+\textbf{电气与计算机工程系年度杰出研究助理（ECE Research Assistant of the Year）}\\
+匹兹堡大学电气与计算机工程系
+\end{datedentry}
+
+% ===== TECHNICAL SKILLS =====
+\section{专业技能}
+\textbf{编程语言与机器学习框架：}Python、PyTorch、C/C++、Hugging Face Transformers、vLLM、DeepSpeed。\\
+\textbf{端侧推理与优化：}使用 TensorRT、ONNX Runtime 与 NNAPI 进行模型量化和加速；在 Jetson AGX Orin 与 Android 智能手机上部署端到端系统。\\
+\textbf{模型训练与对齐：}SFT、GRPO/DPO、LoRA/PEFT。\\
+\textbf{具身智能与仿真：}Isaac Sim、Habitat、Blender。
+
+\end{document}

@@ -11,6 +11,7 @@ authors: "Qiyao Xue, <strong>Haoming Wang (co-first)</strong>, Weichen Liu, Shiq
 subtitle: "latentstate"
 paper: https://arxiv.org/pdf/2512.02340.pdf
 arxiv: https://arxiv.org/abs/2512.02340
+poster: /pdfs/eccv26_reasoning_analysis_poster.pdf
 
 ---
 

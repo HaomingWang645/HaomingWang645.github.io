@@ -10,6 +10,8 @@ venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Re
 authors: "<strong>Haoming Wang</strong>, Qiyao Xue, Wei Gao"
 subtitle: "infinibench"
 paper: /pdfs/infinibench_paper.pdf
+poster: /pdfs/infinibench_poster.pdf
+slides: /pdfs/infinibench_slides.pptx
 
 
 ---

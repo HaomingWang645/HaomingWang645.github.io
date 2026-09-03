@@ -12,6 +12,7 @@ venue: "LifeGenIP Workshop at the European Conference on Computer Vision (ECCV) 
 authors: "Kai Huang, <strong>Haoming Wang (co-first)</strong>, Wei Gao"
 subtitle: "freezeasguard"
 paper: /pdfs/freezeasguard_paper.pdf
+poster: /pdfs/freezeasguard_poster.pdf
 
 ---
 
