@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Conditional acceptance at SenSys 2027"
+date: 2026-08-31 00:00:00 +00:00
+categories: news_item
+author: "Haoming Wang"
+news_text: 'One paper was <strong>conditionally accepted by SenSys 2027</strong>.'
+---
