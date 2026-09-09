@@ -145,6 +145,29 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
 }
 
+.research-lede {
+  margin-top: 1.6rem;
+  margin-bottom: 0.75rem !important;
+}
+
+.research-directions {
+  margin: 0 0 1.35rem;
+  padding-left: 1.35rem;
+}
+.research-directions li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.15rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+.research-directions li:last-child { margin-bottom: 0; }
+.research-directions li::marker { color: $muted-color; }
+.research-directions strong {
+  color: $body-color;
+  font-weight: 700;
+}
+.academic-background { margin-top: 1.4rem; }
+
 // ===== Profile =====
 .profile {
   flex: 0 0 300px;
@@ -186,6 +209,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 280px;
     margin: 0 auto;
   }
+  .research-directions { padding-left: 1.2rem; }
   .post-title { font-size: 3rem; }
 }
 
