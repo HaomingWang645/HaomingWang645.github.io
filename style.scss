@@ -619,30 +619,67 @@ h2 a:hover { color: $accent; }
 // Venue badge
 .publications .venue-badge {
   display: block;
-  background: $venue-default;
-  color: #fff;
-  font-size: 0.9rem;
+  background: #f2f4f7;
+  color: $venue-default;
+  font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 0.45rem 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.45rem;
+  letter-spacing: 0.025em;
+  padding: 0.38rem 0.55rem;
+  border: 1px solid #d0d5dd;
+  border-left: 3px solid currentColor;
+  border-radius: 0.5rem;
   margin-bottom: 0.65rem;
   text-decoration: none;
   text-transform: none;
-  box-shadow: 0 3px 8px rgba(16, 24, 40, 0.12);
+  box-shadow: 0 2px 5px rgba(16, 24, 40, 0.06);
 }
-.publications .venue-badge div { color: #fff; font-weight: 700; }
+.publications .venue-badge div { color: inherit; font-weight: 700; }
 
-.venue-cvpr     { background: $venue-cvpr !important; }
-.venue-iccv     { background: $venue-iccv !important; }
-.venue-aaai     { background: $venue-aaai !important; }
-.venue-mobicom  { background: $venue-mobicom !important; }
-.venue-mobisys  { background: $venue-mobisys !important; }
-.venue-neurips  { background: $venue-neurips !important; }
-.venue-eccv     { background: $venue-eccv !important; }
-.venue-iclr     { background: $venue-iclr !important; }
-.venue-preprint { background: $venue-preprint !important; }
+// Soft venue tints keep the taxonomy without the heavy, saturated banners.
+.venue-cvpr,
+.venue-iccv {
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+  border-left-color: #4f46e5 !important;
+}
+.venue-aaai {
+  background: #fff1f0 !important;
+  color: #9f2d24 !important;
+  border-color: #f3c2bd !important;
+  border-left-color: #b42318 !important;
+}
+.venue-mobicom,
+.venue-mobisys {
+  background: #eaf7f5 !important;
+  color: #0f6f67 !important;
+  border-color: #b9e1db !important;
+  border-left-color: #0f766e !important;
+}
+.venue-neurips {
+  background: #f5f0ff !important;
+  color: #6d28d9 !important;
+  border-color: #d9c8ff !important;
+  border-left-color: #7e22ce !important;
+}
+.venue-eccv {
+  background: #f0f1ff !important;
+  color: #4747b8 !important;
+  border-color: #ced2ff !important;
+  border-left-color: #5b5bd6 !important;
+}
+.venue-iclr {
+  background: #fff7e8 !important;
+  color: #8a5008 !important;
+  border-color: #f2d39a !important;
+  border-left-color: #a15c07 !important;
+}
+.venue-preprint {
+  background: #f2f4f7 !important;
+  color: #475467 !important;
+  border-color: #d0d5dd !important;
+  border-left-color: #667085 !important;
+}
 
 // Keep the venue readable and make the acceptance statistic immediately scannable.
 .publications .periodical .venue-accepted {
