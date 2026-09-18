@@ -5,7 +5,7 @@ date:   2026-02-25 00:00:00 +00:00
 image: /paper_images/infinigen_vertical.png
 categories: research_pub
 author: "Haoming Wang"
-venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 <strong>(accepted)</strong>"
+venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 <strong>(Acceptance Ratio: 25.4%; Oral / submissions: 141 / 16,092 &#8776; 0.88%)</strong>"
 
 authors: "<strong>Haoming Wang</strong>, Qiyao Xue, Wei Gao"
 subtitle: "infinibench"
