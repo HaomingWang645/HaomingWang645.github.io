@@ -621,10 +621,12 @@ h2 a:hover { color: $accent; }
   display: block;
   background: #f2f4f7;
   color: $venue-default;
-  font-size: 0.84rem;
+  font-family: 'Roboto Slab', 'Roboto', serif;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.025em;
-  padding: 0.38rem 0.55rem;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  padding: 0.48rem 0.65rem;
   border: 1px solid #d0d5dd;
   border-left: 3px solid currentColor;
   border-radius: 0.5rem;

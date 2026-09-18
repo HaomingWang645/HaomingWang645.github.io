@@ -19,7 +19,7 @@ permalink: /news/
           {% if post.categories contains 'news_item' %}
             {{ post.news_text }}{% if post.news_link %} <a href="{{ post.news_link }}" target="_blank">[link]</a>{% endif %}
           {% else %}
-            {% assign news_title = post.title | replace: '<span style="color:#c00">', '<strong class="news-venue">' | replace: '</span>', '</strong>' %}
+            {% assign news_title = post.title %}
             {% if post.categories contains 'research_pub' %}
               Paper accepted: <a href="{{ post.paper }}" target="_blank">{{ news_title }}</a>
             {% elsif post.categories contains 'research_recent' %}

@@ -156,7 +156,7 @@
                   {% if post.categories contains 'news_item' %}
                     {{ post.news_text }}{% if post.news_link %} <a href="{{ post.news_link }}" target="_blank">[link]</a>{% endif %}
                   {% else %}
-                    {% assign news_title = post.title | replace: '<span style="color:#c00">', '<strong class="news-venue">' | replace: '</span>', '</strong>' %}
+                    {% assign news_title = post.title %}
                     {% if post.categories contains 'research_pub' %}
                       Paper accepted: <a href="{{ post.paper }}" target="_blank">{{ news_title }}</a>
                     {% elsif post.categories contains 'research_recent' %}
@@ -186,7 +186,7 @@
               <div class="row">
                 <div class="col col-sm-3 abbr">
                   <abbr class="badge rounded w-100 venue-badge venue-preprint">
-                    <div>preprint</div>
+                    <div>Preprint · {{ post.date | date: "%Y" }}</div>
                   </abbr>
                   {% if post.image %}
                   <figure>
@@ -195,7 +195,7 @@
                   {% endif %}
                 </div>
                 <div class="col-sm-9">
-                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
+                  <div class="title">{{ post.title }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical">
                     {% if post.venue %}<em>{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
@@ -225,20 +225,8 @@
             {% assign pub_posts = site.posts | where: "categories", "research_pub" %}
             {% for post in pub_posts %}
             {% if post.homepage_group == 'others' %}{% continue %}{% endif %}
-            {% assign venue_class = 'venue-default' %}
-            {% if post.title contains 'AAAI' %}{% assign venue_short = 'AAAI' %}{% assign venue_class = 'venue-aaai' %}
-            {% elsif post.title contains 'CVPR' %}
-              {% if post.title contains 'oral' %}{% assign venue_short = 'CVPR oral' %}{% else %}{% assign venue_short = 'CVPR' %}{% endif %}
-              {% assign venue_class = 'venue-cvpr' %}
-            {% elsif post.title contains 'ICCV' %}
-              {% if post.title contains 'highlight' %}{% assign venue_short = 'ICCV highlight' %}{% else %}{% assign venue_short = 'ICCV' %}{% endif %}
-              {% assign venue_class = 'venue-iccv' %}
-            {% elsif post.title contains 'MobiCom' %}{% assign venue_short = 'MobiCom' %}{% assign venue_class = 'venue-mobicom' %}
-            {% elsif post.title contains 'MobiSys' %}{% assign venue_short = 'MobiSys' %}{% assign venue_class = 'venue-mobisys' %}
-            {% elsif post.title contains 'NeurIPS' %}{% assign venue_short = 'NeurIPS' %}{% assign venue_class = 'venue-neurips' %}
-            {% elsif post.title contains 'ECCV' %}{% assign venue_short = 'ECCV26' %}{% assign venue_class = 'venue-eccv' %}
-            {% elsif post.title contains 'ICLR' %}{% assign venue_short = 'ICLR' %}{% assign venue_class = 'venue-iclr' %}
-            {% else %}{% assign venue_short = 'venue' %}{% endif %}
+            {% assign venue_short = post.venue_badge | default: 'Venue' %}
+            {% assign venue_class = post.venue_badge_class | default: 'venue-default' %}
             <li>
               <div class="row">
                 <div class="col col-sm-3 abbr">
@@ -252,7 +240,7 @@
                   {% endif %}
                 </div>
                 <div class="col-sm-9">
-                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
+                  <div class="title">{{ post.title }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical">
                     {% if post.venue %}<em class="venue-accepted">{{ post.venue }}</em>, {% endif %}{{ post.date | date: "%Y" }}
@@ -289,7 +277,7 @@
               {% assign other_badge = 'preprint' %}{% assign other_periodical = 'preprint' %}{% assign other_badge_class = 'venue-preprint' %}
             {% elsif post.venue %}
               {% assign other_badge = post.homepage_badge | default: 'publication' %}{% assign other_periodical = post.venue %}
-              {% if post.title contains 'ECCV' %}{% assign other_badge_class = 'venue-eccv' %}{% else %}{% assign other_badge_class = 'venue-default' %}{% endif %}
+              {% assign other_badge_class = post.venue_badge_class | default: 'venue-default' %}
             {% elsif post.status == 'under-review' %}
               {% assign other_badge = 'under review' %}{% assign other_periodical = 'under review' %}{% assign other_badge_class = 'venue-preprint' %}
             {% else %}
@@ -308,7 +296,7 @@
                   {% endif %}
                 </div>
                 <div class="col-sm-9">
-                  <div class="title">{{ post.title | replace: '<span style="color:#c00">', '' | replace: '</span>', '' }}</div>
+                  <div class="title">{{ post.title }}</div>
                   <div class="author">{{ post.authors }}</div>
                   <div class="periodical"><em>{{ other_periodical }}</em>, {{ post.date | date: "%Y" }}</div>
                   <div class="links">

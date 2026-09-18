@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "<span style=\"color:#c00\">[MobiCom26]</span> SpatialMind: Spatially Aware On-Device Embodied AI via Viewpoint Integration"
+title:  "SpatialMind: Spatially Aware On-Device Embodied AI via Viewpoint Integration"
 date:   2026-08-15 00:00:00 +00:00
 image: /paper_images/mosaicthinker.png
 image_class: wide-img
 categories: research_pub
 author: "Haoming Wang"
+venue_badge: "MobiCom 2026"
+venue_badge_class: "venue-mobicom"
 
 venue: "ACM International Conference on Mobile Computing and Networking (MobiCom) 2026"
 authors: "<strong>Haoming Wang</strong>, Qiyao Xue, Weichen Liu, Wei Gao"

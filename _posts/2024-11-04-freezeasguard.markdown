@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "<span style=\"color:#c00\">[ECCV26 Workshop]</span> FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing"
+title:  "FreezeAsGuard: Mitigating Illegal Adaptation of Diffusion Models via Selective Tensor Freezing"
 date:   2026-08-15 00:00:00 +00:00
 image: /paper_images/freezeasguard.png
 categories: research_pub
 author: "Haoming Wang"
 homepage_group: others
-homepage_badge: "ECCV26 workshop"
+homepage_badge: "ECCV 2026 · Workshop"
+venue_badge_class: "venue-eccv"
 
 venue: "LifeGenIP Workshop at the European Conference on Computer Vision (ECCV) 2026"
 authors: "Kai Huang, <strong>Haoming Wang (co-first)</strong>, Wei Gao"
