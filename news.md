@@ -20,7 +20,9 @@ permalink: /news/
             {{ post.news_text }}{% if post.news_link %} <a href="{{ post.news_link }}" target="_blank">[link]</a>{% endif %}
           {% else %}
             {% assign news_title = post.title %}
-            {% if post.categories contains 'research_pub' %}
+            {% if post.news_badge %}
+              Paper accepted as a <strong>{{ post.news_badge }}</strong>: <a href="{{ post.paper }}" target="_blank">{{ news_title }}</a>
+            {% elsif post.categories contains 'research_pub' %}
               Paper accepted: <a href="{{ post.paper }}" target="_blank">{{ news_title }}</a>
             {% elsif post.categories contains 'research_recent' %}
               New work: <a href="{{ post.paper }}" target="_blank">{{ news_title }}</a>

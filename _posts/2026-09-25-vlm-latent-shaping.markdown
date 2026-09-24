@@ -1,11 +1,15 @@
 ---
 layout: post
 title:  "Uncovering and Shaping the Latent Representation of 3D Scene Topology in Vision-Language Models"
-date:   2026-05-07 00:00:00 +00:00
+date:   2026-09-25 00:00:00 +08:00
 image: /paper_images/vlm-latent-shaping.png
-categories: research_recent
+categories: research_pub
 author: "Haoming Wang"
+venue_badge: "NeurIPS 2026 · Spotlight"
+venue_badge_class: "venue-neurips"
+news_badge: "NeurIPS 2026 Spotlight"
 
+venue: "Conference on Neural Information Processing Systems (NeurIPS) 2026 <strong>(Spotlight)</strong>"
 authors: "<strong>Haoming Wang</strong>, Wei Gao"
 subtitle: "vlm_latent_shaping"
 paper: /pdfs/arxiv26_vlm_latent_shaping.pdf
