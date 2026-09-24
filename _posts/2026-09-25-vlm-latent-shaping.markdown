@@ -7,9 +7,9 @@ categories: research_pub
 author: "Haoming Wang"
 venue_badge: "NeurIPS 2026 · Spotlight"
 venue_badge_class: "venue-neurips"
-news_badge: "NeurIPS 2026 Spotlight"
+news_badge: "NeurIPS 2026 Spotlight (1.32%)"
 
-venue: "Conference on Neural Information Processing Systems (NeurIPS) 2026 <strong>(Spotlight)</strong>"
+venue: "Conference on Neural Information Processing Systems (NeurIPS) 2026 <strong>(Spotlight: 1.32%)</strong>"
 authors: "<strong>Haoming Wang</strong>, Wei Gao"
 subtitle: "vlm_latent_shaping"
 paper: /pdfs/arxiv26_vlm_latent_shaping.pdf
