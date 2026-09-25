@@ -11,7 +11,7 @@ venue_badge_class: "venue-eccv"
 venue: "Proceedings of the European Conference on Computer Vision (ECCV) 2026 <strong>(Acceptance Ratio: 27.5%)</strong>"
 authors: "Qiyao Xue, <strong>Haoming Wang (co-first)</strong>, Weichen Liu, Shiqi Wang, Yuyang Wu, Wei Gao"
 subtitle: "latentstate"
-paper: https://arxiv.org/pdf/2512.02340.pdf
+paper: /pdfs/eccv26_paper.pdf
 arxiv: https://arxiv.org/abs/2512.02340
 poster: /pdfs/eccv26_reasoning_analysis_poster.pdf
 
