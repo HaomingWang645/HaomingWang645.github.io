@@ -18,10 +18,10 @@ Homepage order: profile and research directions, optional conference banner, new
 | About page and notes | `about-me.md`, `notes.md`, `notes/` |
 | Publication images and downloadable files | `paper_images/`, `pdfs/` |
 | Site metadata, plugins, and build exclusions | `_config.yml` |
-| Current English CV source and generated copy | `output/pdf/haoming_wang_cv_2026_09_25.tex` and matching PDF |
+| CV sources, older versions, and application variants | `cv_material/cv/` (see its README) |
 | Public CV linked by the navbar | `pdfs/CV_2026_09.pdf` |
 
-`cv_material/` holds older CV drafts, application-specific versions, and research notes. It is excluded from the published site. `cv_material/service.yml` is **not** connected to the homepage; the visible service list is in `_layouts/default.html`.
+`cv_material/cv/` groups the editable CV sources and versions. Local-only CV drafts are in its `private/` folder, and unpublished manuscripts are in `cv_material/papers_under_submission/`; both are Git-ignored. The entire `cv_material/` directory is excluded from the published site. `pdfs/CV_*.pdf` contains published web copies kept at their existing URLs. `cv_material/service.yml` is **not** connected to the homepage; the visible service list is in `_layouts/default.html`.
 
 ## How posts appear on the homepage
 
@@ -45,7 +45,7 @@ When announcing an acceptance, update the existing paper post's category, venue 
 
 The navbar chooses the lexicographically greatest `/pdfs/CV_*.pdf` path among Jekyll static files. To publish a revised CV:
 
-1. Edit or copy the latest LaTeX source in `output/pdf/`.
+1. Choose the reviewed LaTeX source from `cv_material/cv/public_sources/`, or explicitly prepare a private draft for publication.
 2. Compile it with `latexmk -pdf`, using a temporary output directory so auxiliary files do not enter the site.
 3. Check the page count and rendered pages, then save the generated PDF beside its source and copy it to `pdfs/CV_YYYY_MM.pdf`. Updating the current file works; a new file must have a later name than the current public CV so the navbar selects it.
 4. Build the site and verify that the navbar points to the new PDF.

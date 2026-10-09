@@ -9,3 +9,7 @@ Gemfile.lock
 node_modules
 package.json
 favicon.ico
+
+# Local CV drafts and unpublished manuscripts
+/cv_material/cv/private/
+/cv_material/papers_under_submission/
