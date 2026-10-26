@@ -7,7 +7,7 @@ categories: research_pub
 author: "Haoming Wang"
 venue_badge: "CVPR 2026 · Oral"
 venue_badge_class: "venue-cvpr"
-venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 <strong>(Acceptance Ratio: 25.4%; Oral / submissions: 141 / 16,092 &#8776; 0.88%)</strong>"
+venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 <strong>(Top 0.88% of all submissions)</strong>"
 
 authors: "<strong>Haoming Wang</strong>, Qiyao Xue, Wei Gao"
 subtitle: "infinibench"
