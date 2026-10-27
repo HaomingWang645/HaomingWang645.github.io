@@ -9,7 +9,7 @@ author: "Haoming Wang"
 venue_badge: "MobiCom 2026"
 venue_badge_class: "venue-mobicom"
 
-venue: "ACM International Conference on Mobile Computing and Networking (MobiCom) 2026"
+venue: "ACM International Conference on Mobile Computing and Networking (MobiCom) 2026 <strong>(Acceptance Ratio: 89/625 = 14.2%)</strong>"
 authors: "<strong>Haoming Wang</strong>, Qiyao Xue, Weichen Liu, Wei Gao"
 subtitle: "spatialmind"
 paper: /pdfs/spatialmind.pdf
