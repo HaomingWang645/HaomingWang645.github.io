@@ -17,4 +17,4 @@ code: https://github.com/pittisl/vlm-latent-shaping
 
 ---
 
-We show that current VLMs hold a latent topological map of 3D scenes, but it is overshadowed by non-geometric semantics like color and shape. Isolating this subspace via cross-scene linear feature extraction reveals its correspondence to the Laplacian eigenmaps of the scene's 3D Gaussian-kernel graph, motivating a Dirichlet-energy-based latent regularizer that beats standard SFT by up to 12.1% on real-world spatial benchmarks.
+We uncover a latent topological map of 3D scenes in VLMs, obscured by cues such as color and shape. Cross-scene linear feature extraction isolates this geometry-sensitive subspace and reveals its correspondence to Laplacian eigenmaps of the scene's 3D Gaussian-kernel graph. The spectral view clarifies which latent directions reflect topology, how they relate to geometry, and why visual appearance can obscure that information.

@@ -19,7 +19,7 @@ Homepage order: profile and research directions, optional conference banner, new
 | Publication images and downloadable files | `paper_images/`, `pdfs/` |
 | Site metadata, plugins, and build exclusions | `_config.yml` |
 | CV sources, older versions, and application variants | `cv_material/cv/` (see its README) |
-| Public CV linked by the navbar | `pdfs/CV_2026_09.pdf` |
+| Public CV linked by the navbar | `pdfs/CV_2026_11.pdf` |
 
 `cv_material/cv/` groups the editable CV sources and versions. Local-only CV drafts are in its `private/` folder, and unpublished manuscripts are in `cv_material/papers_under_submission/`; both are Git-ignored. The entire `cv_material/` directory is excluded from the published site. `pdfs/CV_*.pdf` contains published web copies kept at their existing URLs. `cv_material/service.yml` is **not** connected to the homepage; the visible service list is in `_layouts/default.html`.
 
