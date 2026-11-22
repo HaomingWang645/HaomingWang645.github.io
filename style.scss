@@ -1,29 +1,29 @@
 ---
 ---
 
-// ===== Color palette (modern academic: paper + ink + indigo) =====
+// ===== Color palette (modern academic: paper + ink + navy) =====
 $body-bg: #f7f8fc;
 $body-color: #172033;
 $muted-color: #5f6b7a;
 $soft-bg: #ffffff;
-$link-color: #4f46e5;
-$link-hover: #3730a3;
-$accent: #4f46e5;
-$accent-strong: #3730a3;
-$accent-soft: #eef2ff;
-$accent-border: #c7d2fe;
+$accent: #0f1b3d;
+$link-color: $accent;
+$link-hover: darken($accent, 5%);
+$accent-strong: $accent;
+$accent-soft: mix($accent, #ffffff, 6%);
+$accent-border: mix($accent, #ffffff, 20%);
 $border-color: #e3e7ef;
 $rule-color: #d5dbe7;
-$surface-hover: #f0f2ff;
+$surface-hover: mix($accent, #ffffff, 8%);
 
 // Restrained venue accents: distinct, but balanced in saturation and contrast.
-$venue-cvpr:    #4338ca;
-$venue-iccv:    #4f46e5;
+$venue-cvpr:    $accent;
+$venue-iccv:    $accent;
 $venue-aaai:    #b42318;
 $venue-mobicom: #0f766e;
 $venue-mobisys: #0d7f78;
 $venue-neurips: #7e22ce;
-$venue-eccv:    #5b5bd6;
+$venue-eccv:    $accent;
 $venue-iclr:    #a15c07;
 $venue-default: #475467;
 $venue-preprint:#667085;
@@ -39,7 +39,7 @@ body {
   line-height: 1.7;
   color: $body-color;
   background:
-    radial-gradient(circle at 92% 3%, rgba(79, 70, 229, 0.07), transparent 28rem),
+    radial-gradient(circle at 92% 3%, rgba($accent, 0.07), transparent 28rem),
     $body-bg;
   background-attachment: fixed;
   padding-top: 64px;
@@ -60,14 +60,14 @@ a:hover, a:focus {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(79, 70, 229, 0.28);
+  outline: 3px solid rgba($accent, 0.28);
   outline-offset: 3px;
   border-radius: 0.2rem;
 }
 
 ::selection {
-  color: #1e1b4b;
-  background: #c7d2fe;
+  color: $accent;
+  background: $accent-border;
 }
 
 strong { font-weight: 700; }
@@ -312,7 +312,7 @@ h2 a:hover { color: $accent; }
   border: 1px solid $accent-border;
   border-left: 4px solid $accent;
   border-radius: 0.65rem;
-  box-shadow: 0 5px 18px rgba(79, 70, 229, 0.07);
+  box-shadow: 0 5px 18px rgba($accent, 0.07);
   font-size: 1.05rem;
   color: $body-color;
 }
@@ -425,7 +425,7 @@ h2 a:hover { color: $accent; }
   border: 1.5px solid $accent;
   border-radius: 1.5rem;
   border-bottom: 1.5px solid $accent !important;
-  box-shadow: 0 1px 3px rgba(79, 70, 229, 0.12);
+  box-shadow: 0 1px 3px rgba($accent, 0.12);
   transition: all 0.18s ease;
 }
 .blog-post-back a:hover {
@@ -433,7 +433,7 @@ h2 a:hover { color: $accent; }
   color: #fff;
   border-color: $accent !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.24);
+  box-shadow: 0 4px 12px rgba($accent, 0.24);
   text-decoration: none;
 }
 .blog-post-header { margin-bottom: 1.25rem; }
@@ -608,7 +608,7 @@ h2 a:hover { color: $accent; }
   transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 .publications .bibliography > li:hover {
-  background: rgba(238, 242, 255, 0.72);
+  background: rgba($accent-soft, 0.72);
   box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
   transform: translateY(-1px);
 }
@@ -640,10 +640,10 @@ h2 a:hover { color: $accent; }
 // Soft venue tints keep the taxonomy without the heavy, saturated banners.
 .venue-cvpr,
 .venue-iccv {
-  background: #eef2ff !important;
-  color: #3730a3 !important;
-  border-color: #c7d2fe !important;
-  border-left-color: #4f46e5 !important;
+  background: $accent-soft !important;
+  color: $accent !important;
+  border-color: $accent-border !important;
+  border-left-color: $accent !important;
 }
 .venue-aaai {
   background: #fff1f0 !important;
@@ -665,10 +665,10 @@ h2 a:hover { color: $accent; }
   border-left-color: #7e22ce !important;
 }
 .venue-eccv {
-  background: #f0f1ff !important;
-  color: #4747b8 !important;
-  border-color: #ced2ff !important;
-  border-left-color: #5b5bd6 !important;
+  background: $accent-soft !important;
+  color: $accent !important;
+  border-color: $accent-border !important;
+  border-left-color: $accent !important;
 }
 .venue-iclr {
   background: #fff7e8 !important;
@@ -771,7 +771,7 @@ h2 a:hover { color: $accent; }
   color: #fff;
   border-color: $accent;
   transform: translateY(-1px);
-  box-shadow: 0 3px 9px rgba(79, 70, 229, 0.22);
+  box-shadow: 0 3px 9px rgba($accent, 0.22);
 }
 
 .publications .abstract {
@@ -900,7 +900,7 @@ h2 a:hover { color: $accent; }
   border-radius: 50%;
   font-size: 1.2rem;
   font-weight: 400;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.24);
+  box-shadow: 0 4px 12px rgba($accent, 0.24);
 }
 
 .interest-lede {
